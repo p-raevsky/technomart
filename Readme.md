@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Pavlo Raievskiy](https://up.htmlacademy.ru/htmlcss/29/user/1573235).
-* Наставник: [Сергей Зубов](https://htmlacademy.ru/profile/serj).
+* Наставник: [Сергей Зубов🦸](https://htmlacademy.ru/profile/serj).
 
 ---
 
