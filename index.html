@@ -36,7 +36,7 @@
       </nav>
     </header>
     <main>
-      <h1>Интернет-магазин перфораторов «Техномарт»</h1>
+      <h1>Интернет-магазин перфораторов «Техномарт»</h1><!--Сделаю невидимым в CSS-->
       <section>
         <h2>Промо-блок</h2>
         <ul>
@@ -63,18 +63,21 @@
           </li>
         </ul>
       </section>
-      <article><!-- Правильное ли решение использовать article?-->
+      <section>
         <h2>ПЕРФОРАТОРЫ</h2>
         <p>Настоящие мужские игрушки</p>
         <figure>
           <a href="#">
-            <img src="https://via.placeholder.com/150x100" alt="Рабочий с перфоратором">
+            <img src="https://via.placeholder.com/150x100" alt="Перфораторы">
+          </a>
+          <a href="#">
+            <img src="https://via.placeholder.com/150x100" alt="Дрели">
           </a>
         </figure>
         <button type="button" disabled>Назад</button>
         <button type="button">Вперед</button>
         <a href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
-      </article>
+      </section>
       <section>
         <h2>ПОПУЛЯРНЫЕ ТОВАРЫ:</h2>
         <a href="blank.html">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</a>
@@ -130,10 +133,9 @@
       </section>
       <section>
         <h2>CЕРВИСЫ</h2>
-        <p>Хороший интернет-магазин отличается от плохого не только ценами!
+        <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <figure>
-          <p><img src="https://via.placeholder.com/150x100" alt=""></p>
           <figcaption>
             <h3>ДОСТАВКА</h3>
             <p>
@@ -143,6 +145,9 @@
               поднимая его на ваш этаж!
             </p>
           </figcaption>
+          <p><img src="https://via.placeholder.com/150x100" alt="Доставка"></p><!--Обязательно ли оборачивать в тег <p>?-->
+          <p><img src="https://via.placeholder.com/150x100" alt="Гарантия"></p>
+          <p><img src="https://via.placeholder.com/150x100" alt="Кредит"></p>
         </figure>
         <div>
           <button type="button">Доставка</button>
@@ -178,5 +183,65 @@
         <button type="button">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button>
       </section>
     </main>
+    <footer>
+      <a>
+        <img src="https://via.placeholder.com/150x100" alt="Логотип «Техномарт»">
+      </a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="blank.html">Компания</a></li>
+            <li><a href="blank.html">Новости</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="blank.html">Доставка</a></li>
+            <li><a href="blank.html">Контакты</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li><a href="blank.html">Материалы</a></li>
+            <li><a href="blank.html">Техника</a></li>
+            <li><a href="blank.html">Инструмент</a></li>
+            <li><a href="blank.html">Спецпредложения</a></li>
+          </ul>
+        </li>
+      </ul>
+      <section>
+        <h3>Адрес</h3><!--Сделаю невидимым в CSS-->
+        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+            +7 (812) 555-05-55
+        </p>
+      </section>
+      <div>
+        <section>
+          <h3>Авторское право</h3><!--Сделаю невидимым в CSS-->
+          <p>© 2010–2019 Компания «Техномарт»<br>
+            Все права защищены
+          </p>
+        </section>
+        <section>
+          <h3>Социальные сети</h3><!--Сделаю невидимым в CSS-->
+          <ul>
+            <li>
+              <a href="#">Вконтакте</a>
+            </li>
+            <li>
+              <a href="#">Фейсбук</a>
+            </li>
+            <li>
+              <a href="#">Инстаграм</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Обратная связь</h3>
+          <a href="#">mail@htmlacademy.ru</a>
+        </section>
+        <section>
+          <h3>Разработано—</h3>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        </section>
+      </div>
+    </footer>
   </body>
 </html>
