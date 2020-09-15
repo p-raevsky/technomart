@@ -1,4 +1,5 @@
 /* Fonts */
+
 /* cuprum-regular - latin */
 @font-face {
     font-family: 'Cuprum';
@@ -41,3 +42,56 @@
          url('../fonts/cuprum-v12-latin-700.svg#Cuprum') format('svg'); /* Legacy iOS */
     font-display: swap;
   }
+  /* pt-sans-regular - latin */
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/pt-sans-v11-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('PT Sans'), local('PTSans-Regular'),
+         url('../fonts/pt-sans-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/pt-sans-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/pt-sans-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/pt-sans-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/pt-sans-v11-latin-regular.svg#PTSans') format('svg'); /* Legacy iOS */
+  }
+  /* pt-sans-700 - latin */
+  @font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/pt-sans-v11-latin-700.eot'); /* IE9 Compat Modes */
+    src: local('PT Sans Bold'), local('PTSans-Bold'),
+         url('../fonts/pt-sans-v11-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/pt-sans-v11-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/pt-sans-v11-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/pt-sans-v11-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/pt-sans-v11-latin-700.svg#PTSans') format('svg'); /* Legacy iOS */
+  }
+
+  /* Variables */
+
+  :root {
+    --basic-black: #000000;
+    --basic-extra-dark: #293449;
+    --basic-dark: #32425C;
+    --basic-white: #FFFFFF;
+    --basic-red: #EE3643;
+    --basic-orange: #FFC047;
+    --basic-yellow: #FFD180;
+    --basic-blue: #3BBCE3;
+    --basic-violet: #DC91D8;
+    --basic-green: #63A63E;
+    --green-light: #8ED78F;
+    --basic-brown: #F9F5F0;
+    --brown-light: #F7F3EC;
+    --basic-gray: #B7BFC8;
+    --gray-medium: #C1C6CE;
+    --gray-darken: #A9A9A9;
+    --gray-dark: #C5C5C5;
+    --gray-light: #EAEAEA;
+    --gray-lighten: #F1F5F7;
+    --gray-extra-light: #F3F7F9;
+    --gray-another: #E5E5E5;
+  }
+
