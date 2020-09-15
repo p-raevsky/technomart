@@ -113,15 +113,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Cuprum", Arial, sans-serif;
-    font-style: normal;
-    font-weight: normal;
     font-size: 13px;
     line-height: 24px;
     color: var(--basic-black);
     background-color: var(--basic-white);
 }
 
-.page a {
+a {
     text-decoration: none;
 }
 
@@ -145,7 +143,7 @@ img {
 }
 
 .header-phone {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 21px;
     line-height: 30px;
     color: var(--basic-red);
@@ -182,11 +180,6 @@ img {
     color: var(--basic-white);
 }
 
-.site-navigation a:link {
-    color: var(--basic-white);
-    background-color: var(--basic-dark);
-}
-
 .site-navigation a:hover {
     background-color: var(--basic-darken);
 }
@@ -196,20 +189,18 @@ img {
     background-color: var(--basic-darkest);
 }
 
-.container h1 {
+.visually-hidden {
     visibility: hidden;
     position: absolute;
 }
 
-.promo h2 {
-    visibility: hidden;
-    position: absolute;
-}
 .promo {
-    list-style: none;
     font-size: 14px;
     line-height: 18px;
     color: var(--basic-white);
+}
+
+.promo-list {
     list-style: none;
 }
 
@@ -239,23 +230,23 @@ img {
     background-color: var(--gray-darken);
 }
 
-li.promo-item:nth-child(1) {
+.promo-item:nth-child(1) {
     background-color: var(--basic-orange);
 }
 
-li.promo-item:nth-child(2) {
+.promo-item:nth-child(2) {
     background-color: var(--basic-blue);
 }
 
-li.promo-item:nth-child(3) {
+.promo-item:nth-child(3) {
     background-color: var(--basic-violet);
 }
 
-li.promo-item:nth-child(4) {
+.promo-item:nth-child(4) {
     background-color: var(--green-lighten);
 }
 
-li.promo-item:nth-child(5) {
+.promo-item:nth-child(5) {
     background-color: var(--basic-orange);
 }
 
@@ -265,7 +256,6 @@ li.promo-item:nth-child(5) {
     line-height: 36px;
     text-transform: uppercase;
     color: var(--basic-white);
-    background-color: var(--gray-dark);
 }
 
 .slider-text {
@@ -278,16 +268,20 @@ li.promo-item:nth-child(5) {
     background: rgba(0, 0, 0, 0.25);
 }
 
+.slider {
+    background-color: var(--gray-dark);
+}
+
 .button {
     font: inherit;
     font-size: 14px;
     line-height: 18px;
     text-align: center;
-    vertical-align: middle;
     text-transform: uppercase;
     color: var(--basic-white);
     background-color: var(--basic-red);
     border: none;
+    padding: 0px;
 }
 
 .button:link {
@@ -321,7 +315,7 @@ li.promo-item:nth-child(5) {
 }
 
 .product-title {
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-weight: bold;
     font-size: 18px;
     line-height: 20px;
@@ -350,7 +344,6 @@ li.promo-item:nth-child(5) {
 }
 
 .product .button-bookmark:hover {
-
     border: 3px solid var(--basic-dark);
     border-radius: 2px;
 }
@@ -360,8 +353,8 @@ li.promo-item:nth-child(5) {
     border-radius: 2px;
 }
 
-del {
-    font-family: "PT Sans", sans-serif;
+.product del {
+    font-family: "PT Sans", Arial, sans-serif;
     font-weight: bold;
     font-size: 17px;
     line-height: 18px;
@@ -382,9 +375,7 @@ del {
     background-color: var(--gray-lighten);
 }
 
-.service-title,
-.about-title,
-.contacts-title {
+.black-title {
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
@@ -407,11 +398,6 @@ del {
     background-color: var(--basic-white);
 }
 
-.about h2 {
-    visibility: hidden;
-    position: absolute;
-}
-
 .about-item {
     font-size: 18px;
     line-height: 24px;
@@ -426,13 +412,7 @@ del {
     list-style: none;
 }
 
-.footer-nav ul {
-    list-style: none;
-}
-
-.footer-nav a,
-.footer-contacts p,
-.footer-contacts a {
+.footer-text {
     font-size: 18px;
     line-height: 24px;
     color: var(--gray-extra-light);
@@ -472,40 +452,26 @@ del {
     color: var(--basic-white);
 }
 
-.footer-bottom p,
-.footer-feedback h3,
-.footer-feedback a,
-.footer-developed h3,
-.footer-developed a {
+.footer-small-text {
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-white);
 }
 
-.footer-feedback .footer-feedback-link,
-.footer-developed .footer-developed-link {
+.footer-feedback-link,
+.footer-developed-link {
     color: var(--basic-yellow);
 }
 
-.footer-feedback .footer-feedback-link:hover,
-.footer-developed .footer-developed-link:hover {
+.footer-feedback-link:hover,
+.footer-developed-link:hover {
     text-decoration: underline;
 }
 
-.footer-feedback .footer-feedback-link:active,
-.footer-developed .footer-developed-link:active {
+.footer-feedback-link:active,
+.footer-developed-link:active {
     text-decoration: none;
     color: var(--basic-red);
-}
-
-.footer-contacts h3 {
-    visibility: hidden;
-    position: absolute;
-}
-
-.copyright h3 {
-    visibility: hidden;
-    position: absolute;
 }
 
 .footer-social ul {
