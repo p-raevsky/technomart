@@ -13,9 +13,9 @@
          url('../fonts/cuprum-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/cuprum-v12-latin-regular.svg#Cuprum') format('svg'); /* Legacy iOS */
     font-display: swap;
-  }
-  /* cuprum-italic - latin */
-  @font-face {
+}
+/* cuprum-italic - latin */
+@font-face {
     font-family: 'Cuprum';
     font-style: italic;
     font-weight: 400;
@@ -27,9 +27,9 @@
          url('../fonts/cuprum-v12-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/cuprum-v12-latin-italic.svg#Cuprum') format('svg'); /* Legacy iOS */
     font-display: swap;
-  }
-  /* cuprum-700 - latin */
-  @font-face {
+}
+/* cuprum-700 - latin */
+@font-face {
     font-family: 'Cuprum';
     font-style: normal;
     font-weight: 700;
@@ -41,8 +41,8 @@
          url('../fonts/cuprum-v12-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/cuprum-v12-latin-700.svg#Cuprum') format('svg'); /* Legacy iOS */
     font-display: swap;
-  }
-  /* pt-sans-regular - latin */
+}
+/* pt-sans-regular - latin */
 @font-face {
     font-family: 'PT Sans';
     font-style: normal;
@@ -54,9 +54,9 @@
          url('../fonts/pt-sans-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
          url('../fonts/pt-sans-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/pt-sans-v11-latin-regular.svg#PTSans') format('svg'); /* Legacy iOS */
-  }
-  /* pt-sans-700 - latin */
-  @font-face {
+}
+/* pt-sans-700 - latin */
+@font-face {
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 700;
@@ -67,14 +67,16 @@
          url('../fonts/pt-sans-v11-latin-700.woff') format('woff'), /* Modern Browsers */
          url('../fonts/pt-sans-v11-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/pt-sans-v11-latin-700.svg#PTSans') format('svg'); /* Legacy iOS */
-  }
+}
 
-  /* Variables */
+/* Variables */
 
-  :root {
+:root {
     --basic-black: #000000;
-    --basic-extra-dark: #293449;
     --basic-dark: #32425C;
+    --basic-darken: #293449;
+    --basic-darkest:#1D2739;
+    --basic-extra-dark: #293449;
     --basic-white: #FFFFFF;
     --basic-red: #EE3643;
     --basic-orange: #FFC047;
@@ -82,16 +84,435 @@
     --basic-blue: #3BBCE3;
     --basic-violet: #DC91D8;
     --basic-green: #63A63E;
-    --green-light: #8ED78F;
     --basic-brown: #F9F5F0;
-    --brown-light: #F7F3EC;
     --basic-gray: #B7BFC8;
+    --Basic-greylight: #C5C5C5;
+
+    --dark-opacity-50: rgba(50,60,92,0.5);
+    --white-opacity-30: rgba(255,255,255,0.3);
+    --red-dark: #CA2C37;
+    --red-darken: #BA2732;
+    --green-light: #5FBB2D;
+    --green-dark: #518534;
+    --green-lighten: #8ED78F;
+    --brown-light: #F7F3EC;
     --gray-medium: #C1C6CE;
     --gray-darken: #A9A9A9;
-    --gray-dark: #C5C5C5;
+    --gray-darken-opacity-30: rgba(169,169,169,0.3);
+    --gray-dark: rgba(197,197,197,0.3);
     --gray-light: #EAEAEA;
     --gray-lighten: #F1F5F7;
     --gray-extra-light: #F3F7F9;
     --gray-another: #E5E5E5;
-  }
+}
 
+/* Global */
+
+body {
+    min-width: 940px;
+    margin: 0;
+    padding: 0;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+.page a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+
+.header-caption {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 23px;
+    color: var(--basic-red);
+}
+
+.main-header p {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.header-phone {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    color: var(--basic-red);
+}
+
+/* Main */
+
+.signin-link {   /*Отличается шрифт от того, что в макете. НЕ могу разобраться почему*/
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.signin-link:link {
+    color: var(--basic-black);
+}
+
+.signin-link:hover {
+    color: var(--basic-red);
+}
+
+.signin-link:active {
+    color: var(--Basic-greylight);
+}
+
+
+.site-navigation {
+    background-color: var(--basic-dark);
+    list-style: none;
+}
+
+.site-navigation a {
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--basic-white);
+}
+
+.site-navigation a:link {
+    color: var(--basic-white);
+    background-color: var(--basic-dark);
+}
+
+.site-navigation a:hover {
+    background-color: var(--basic-darken);
+}
+
+.site-navigation a:active {
+    opacity: 0.5;
+    background-color: var(--basic-darkest);
+}
+
+.container h1 {
+    visibility: hidden;
+    position: absolute;
+}
+
+.promo h2 {
+    visibility: hidden;
+    position: absolute;
+}
+.promo {
+    list-style: none;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--basic-white);
+    list-style: none;
+}
+
+.promo-item-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.promo-item-link {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--white-opacity-30);
+}
+
+.promo-item-link:link {
+    color: var(--basic-white);
+}
+
+.promo-item-link:hover {
+    background-color: var(--gray-dark);
+}
+
+.promo-item-link:active {
+    background-color: var(--gray-darken);
+}
+
+li.promo-item:nth-child(1) {
+    background-color: var(--basic-orange);
+}
+
+li.promo-item:nth-child(2) {
+    background-color: var(--basic-blue);
+}
+
+li.promo-item:nth-child(3) {
+    background-color: var(--basic-violet);
+}
+
+li.promo-item:nth-child(4) {
+    background-color: var(--green-lighten);
+}
+
+li.promo-item:nth-child(5) {
+    background-color: var(--basic-orange);
+}
+
+.slider-title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--gray-dark);
+}
+
+.slider-text {
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--basic-white)
+}
+
+.slider div {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.button {
+    font: inherit;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--basic-red);
+    border: none;
+}
+
+.button:link {
+    background-color: var(--basic-red);
+}
+
+.button:hover {
+    background-color: var(--red-dark)
+}
+
+.button:active {
+    background-color: var(--red-darken)
+}
+
+.popular-title-block {
+    background-color: var(--basic-brown);
+}
+
+.popular-title,
+.service-description-title {
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-dark);
+}
+
+.product {
+    background-color: var(--basic-white);
+    border: 1px solid var(--gray-light);
+    list-style: none;
+}
+
+.product-title {
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--basic-black);
+}
+
+.button-buy {
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--basic-green);
+}
+
+.product .button-buy:hover {
+    background-color: var(--green-light);
+}
+
+.product .button-buy:active {
+    background-color: var(--green-dark);
+}
+
+.button-bookmark {
+    text-transform: uppercase;
+    color: var(--basic-dark);
+    border: 3px solid var(--basic-green);
+    border-radius: 2px;
+}
+
+.product .button-bookmark:hover {
+
+    border: 3px solid var(--basic-dark);
+    border-radius: 2px;
+}
+
+.product .button-bookmark:active {
+    border: 3px solid var(--dark-opacity-50);
+    border-radius: 2px;
+}
+
+del {
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--gray-darken);
+}
+
+.popular-producer-list {
+    list-style: none;
+}
+
+.popular-producer-item {
+    background-color: var(--basic-white);
+    border: 1px solid var(--gray-light);
+}
+
+.service {
+    background-color: var(--gray-lighten);
+}
+
+.service-title,
+.about-title,
+.contacts-title {
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.button-service-item {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    color: var(--basic-white);
+    background-color: var(--basic-dark);
+}
+
+.button-service-item:hover {
+    background-color: var(--basic-darken);
+}
+
+.button-service-item:active {
+    color: var(--basic-dark);
+    background-color: var(--basic-white);
+}
+
+.about h2 {
+    visibility: hidden;
+    position: absolute;
+}
+
+.about-item {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+/* Footer */
+
+.page-footer {
+    background-color: var(--basic-dark);
+}
+.page-footer ul {
+    list-style: none;
+}
+
+.footer-nav ul {
+    list-style: none;
+}
+
+.footer-nav a,
+.footer-contacts p,
+.footer-contacts a {
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--gray-extra-light);
+}
+
+.top-list a {
+    color: var(--gray-lighten);
+}
+
+.top-list a:hover {
+    text-decoration: underline;
+}
+
+.top-list a:active {
+    text-decoration: none;
+    opacity: 50%;
+}
+
+.bottom-list a {
+    color: var(--basic-yellow);
+}
+
+.bottom-list a:hover {
+    text-decoration: underline;
+}
+
+.bottom-list a:active {
+    text-decoration: none;
+    opacity: 50%;
+}
+
+.footer-bottom {
+    background-color: var(--basic-darken);
+}
+
+.footer-social .social-button {
+    color: var(--basic-white);
+}
+
+.footer-bottom p,
+.footer-feedback h3,
+.footer-feedback a,
+.footer-developed h3,
+.footer-developed a {
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-white);
+}
+
+.footer-feedback .footer-feedback-link,
+.footer-developed .footer-developed-link {
+    color: var(--basic-yellow);
+}
+
+.footer-feedback .footer-feedback-link:hover,
+.footer-developed .footer-developed-link:hover {
+    text-decoration: underline;
+}
+
+.footer-feedback .footer-feedback-link:active,
+.footer-developed .footer-developed-link:active {
+    text-decoration: none;
+    color: var(--basic-red);
+}
+
+.footer-contacts h3 {
+    visibility: hidden;
+    position: absolute;
+}
+
+.copyright h3 {
+    visibility: hidden;
+    position: absolute;
+}
+
+.footer-social ul {
+    list-style: none;
+}
+
+.footer-social h3 {
+    visibility: hidden;
+    position: absolute;
+}
