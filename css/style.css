@@ -415,13 +415,11 @@ img {
 
 .pagination-item-current {
     background-color: var(--basic-red);
-    border: none;
+    border-color: transparent;
 }
 
-.pagination-item-current a{
-    background-color: var(--basic-red);
+.pagination-item-current a {
     color: var(--basic-white);
-    border: none;
 }
 
 .pagination-item:hover {
