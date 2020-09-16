@@ -302,7 +302,7 @@ img {
     color: var(--basic-dark);
 }
 
-.inner-page h1 {
+.main-title {
     background-color: var(--gray-second);
 }
 
@@ -405,7 +405,7 @@ img {
     border-radius: 2px;
 }
 
-.pagination-item a{
+.pagination-item a {
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -413,14 +413,15 @@ img {
     color: var(--basic-black);
 }
 
-.pagination-item:nth-child(1) {
+.pagination-item-current {
     background-color: var(--basic-red);
-    color: var(--basic-white);
     border: none;
 }
 
-.pagination-item:nth-child(1) a{
+.pagination-item-current a{
+    background-color: var(--basic-red);
     color: var(--basic-white);
+    border: none;
 }
 
 .pagination-item:hover {
