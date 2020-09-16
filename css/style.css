@@ -80,6 +80,7 @@
     --basic-gray: #B7BFC8;
     --Basic-greylight: #C5C5C5;
 
+    --black-opacity-25: rgba(0,0,0,0.25);
     --dark-opacity-50: rgba(50,60,92,0.5);
     --white-opacity-30: rgba(255,255,255,0.3);
     --red-dark: #CA2C37;
@@ -143,12 +144,9 @@ img {
 
 /* Main */
 
-.signin-link {   /*Отличается шрифт от того, что в макете. НЕ могу разобраться почему*/
+.signin-link {
     font-size: 21px;
     line-height: 21px;
-}
-
-.signin-link:link {
     color: var(--basic-black);
 }
 
@@ -210,16 +208,12 @@ img {
     background-color: var(--white-opacity-30);
 }
 
-.promo-item-link:link {
-    color: var(--basic-white);
-}
-
 .promo-item-link:hover {
     background-color: var(--gray-dark);
 }
 
 .promo-item-link:active {
-    background-color: var(--gray-darken);
+    background-color: var(--gray-darken-opacity-30);
 }
 
 .promo-item:nth-child(1) {
@@ -256,8 +250,8 @@ img {
     color: var(--basic-white)
 }
 
-.slider div {
-    background: rgba(0, 0, 0, 0.25);
+.transparent-black-bg {
+    background-color: var(--black-opacity-25);
 }
 
 .slider {
@@ -274,10 +268,6 @@ img {
     background-color: var(--basic-red);
     border: none;
     padding: 0px;
-}
-
-.button:link {
-    background-color: var(--basic-red);
 }
 
 .button:hover {
@@ -300,10 +290,13 @@ img {
     color: var(--basic-dark);
 }
 
+.popular-list{
+    list-style: none;
+}
+
 .product {
     background-color: var(--basic-white);
     border: 1px solid var(--gray-light);
-    list-style: none;
 }
 
 .product-title {
@@ -320,11 +313,11 @@ img {
     background-color: var(--basic-green);
 }
 
-.product .button-buy:hover {
+.button-buy:hover {
     background-color: var(--green-light);
 }
 
-.product .button-buy:active {
+.button-buy:active {
     background-color: var(--green-dark);
 }
 
@@ -335,12 +328,12 @@ img {
     border-radius: 2px;
 }
 
-.product .button-bookmark:hover {
+.button-bookmark:hover {
     border: 3px solid var(--basic-dark);
     border-radius: 2px;
 }
 
-.product .button-bookmark:active {
+.button-bookmark:active {
     border: 3px solid var(--dark-opacity-50);
     border-radius: 2px;
 }
@@ -440,7 +433,7 @@ img {
     background-color: var(--basic-darken);
 }
 
-.footer-social .social-button {
+.social-button {
     color: var(--basic-white);
 }
 
@@ -464,13 +457,4 @@ img {
 .footer-developed-link:active {
     text-decoration: none;
     color: var(--basic-red);
-}
-
-.footer-social ul {
-    list-style: none;
-}
-
-.footer-social h3 {
-    visibility: hidden;
-    position: absolute;
 }
