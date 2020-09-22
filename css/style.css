@@ -190,7 +190,7 @@ img {
     padding: 70px 0px;
 }
 
-.top-list ul{
+.top-list ul {
     display: grid;
     grid-template-columns: repeat(5, auto);
     gap: 59px;
@@ -198,7 +198,7 @@ img {
     margin-right: auto;
 }
 
-.bottom-list ul{
+.bottom-list ul {
     display: grid;
     grid-template-columns: repeat(4, auto);
     gap: 59px;
