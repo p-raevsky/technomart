@@ -122,7 +122,97 @@ img {
     height: auto;
 }
 
+/* Grid */
+
+.page {
+    height: 100%;
+}
+
+.page-body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+}
+
+.promo-list {
+    display: grid;
+    grid-template-rows: repeat(3, 123px);
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.promo-item:nth-last-child(2) {
+    grid-area: 2/3/3/4;
+}
+
+.promo-item:last-child {
+    grid-area: 3/3/4/4;
+}
+
+.site-navigation {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 56px;
+}
+
+.popular-title-block {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    margin-bottom: 20px;
+}
+
+.popular-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.popular-producer-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, max-content);
+    gap: 20px;
+}
+
+.about-block {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+}
+
+.about,
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 70px 0px;
+}
+
+.top-list ul{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 59px;
+    width: 549px;
+    margin-right: auto;
+}
+
+.bottom-list ul{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 59px;
+    width: 525px;
+    margin-right: auto;
+}
+
 /* Header */
+
+.toolbar {
+    width: 100%;
+    height: 42px;
+    background-color: var(--basic-darken);
+}
 
 .header-caption {
     font-style: italic;
@@ -143,7 +233,16 @@ img {
     color: var(--basic-red);
 }
 
-/* Main */
+.main-nav {
+    width: 100%;
+    height: 320px;
+    background-color: var(--gray-extra-light);
+}
+
+.signin-block {
+    height: 158px;
+    display: flex;
+}
 
 .signin-link {
     font-size: 21px;
@@ -175,10 +274,13 @@ img {
 
 .list-style-none {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .site-navigation {
     background-color: var(--basic-dark);
+    padding: 16px  53px 20px 53px;
 }
 
 .site-navigation a {
@@ -196,6 +298,16 @@ img {
     background-color: var(--basic-darkest);
 }
 
+/* Container */
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Main */
+
 .visually-hidden {
     visibility: hidden;
     position: absolute;
@@ -204,6 +316,7 @@ img {
 .promo {
     font-size: 14px;
     line-height: 18px;
+    margin-top: 59px;
     color: var(--basic-white);
 }
 
@@ -250,6 +363,7 @@ img {
 }
 
 .slider-title {
+    position: absolute;
     font-weight: 700;
     font-size: 36px;
     line-height: 36px;
@@ -258,17 +372,40 @@ img {
 }
 
 .slider-text {
+    position: absolute;
     font-size: 18px;
     line-height: 24px;
     color: var(--basic-white)
 }
 
 .transparent-black-bg {
+    position: absolute;
+    top: 0px;
+    width: 620px;
+    height: 104px;
     background-color: var(--black-opacity-25);
+
 }
 
 .slider {
+    width: 620px;
+    height: 266px;
+    position: relative;
+    top: -279px;
     background-color: var(--gray-dark);
+}
+
+.slider-gallery-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+}
+
+.slider-gallery-button {
+    position: absolute;
 }
 
 .button {
@@ -276,11 +413,13 @@ img {
     font-size: 14px;
     line-height: 18px;
     text-align: center;
+    vertical-align: middle;
     text-transform: uppercase;
     color: var(--basic-white);
     background-color: var(--basic-red);
     border: none;
     padding: 0px;
+    margin: 0px;
 }
 
 .button:hover {
@@ -293,6 +432,12 @@ img {
 
 .popular-title-block {
     background-color: var(--basic-brown);
+    height: 89px;
+    align-items: center;
+}
+
+.popular-title.dark-title {
+    margin-left: 28px;
 }
 
 .dark-title {
@@ -300,6 +445,8 @@ img {
     line-height: 30px;
     text-transform: uppercase;
     color: var(--basic-dark);
+    margin: 0;
+    padding: 0;
 }
 
 .main-title {
@@ -372,15 +519,44 @@ img {
     border: 1px solid var(--gray-light);
 }
 
+.popular-button {
+    padding: 11px 24px 9px;
+    margin: 25px 14px 26px 0px;
+    box-sizing: content-box;
+}
+
+.popular-list,
+.popular-producer-list {
+    margin-bottom: 70px; /* почему если я вставляю это значение с гридом оно не работает?*/
+}
+
 .service,
 .punchers {
+    position: relative;
     background-color: var(--gray-lighten);
+    height: 522px;
 }
 
 .black-title {
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+.about-title {
+    font-weight: 700;
+}
+
+.service-title {
+    padding-top: 64px;
+}
+
+.service-description img {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
 }
 
 .button-service-item {
@@ -430,7 +606,6 @@ img {
 .pagination-item:active {
     border: 1px solid var(--basic-red);
     border-radius: 2px;
-
 }
 
 .about-item {
@@ -448,7 +623,33 @@ img {
 /* Footer */
 
 .page-footer {
+    height: 300px;
+    position: relative;
+}
+
+.footer-logo {
+    position: absolute;
+    top: 0;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 37px;
+}
+
+.page-footer {
     background-color: var(--basic-dark);
+}
+
+p.footer-text {
+    position: relative;
+    top: -50px;
+}
+
+.bottom-list {
+    margin-top: 34px;
 }
 
 .footer-text {
@@ -485,6 +686,24 @@ img {
 
 .footer-bottom {
     background-color: var(--basic-darken);
+    height: 107px;
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+}
+
+.feedback-block {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    gap: 51px;
+}
+
+.footer-developed {
+    margin-right: 13px;
 }
 
 .social-button {
@@ -495,6 +714,15 @@ img {
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-white);
+}
+.footer-bottom h3,
+.footer-bottom p {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-feedback-link.footer-small-text {
+    line-height: 97%;
 }
 
 .footer-feedback-link,
