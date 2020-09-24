@@ -104,8 +104,8 @@
 
 body {
     min-width: 940px;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
@@ -172,7 +172,7 @@ img {
     gap: 20px;
 }
 
-.about-block .container{
+.about-block .container {
     display: grid;
     grid-template-columns: 1fr 300px;
 }
@@ -284,8 +284,8 @@ img {
 
 .list-style-none {
     list-style: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .site-navigation {
@@ -312,7 +312,7 @@ img {
 
 .container {
     width: 940px;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 /* Main */
@@ -332,7 +332,7 @@ img {
     font-size: 24px;
     line-height: 30px;
     color: var(--basic-white);
-    margin: 0px;
+    margin: 0;
 }
 
 .promo-item-link {
@@ -341,8 +341,8 @@ img {
     text-transform: uppercase;
     color: var(--basic-white);
     background-color: var(--white-opacity-30);
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .promo-item-link:hover {
@@ -385,15 +385,14 @@ img {
     line-height: 36px;
     text-transform: uppercase;
     color: var(--basic-white);
-    margin: 0px;
+    margin: 0;
 }
 
 .slider-text {
     font-size: 18px;
     line-height: 24px;
     color: var(--basic-white);
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
 }
 
 .transparent-black-bg {
@@ -412,8 +411,8 @@ img {
     color: var(--basic-white);
     background-color: var(--basic-red);
     border: none;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .button:hover {
@@ -439,7 +438,7 @@ img {
     line-height: 30px;
     text-transform: uppercase;
     color: var(--basic-dark);
-    margin: 0px;
+    margin: 0;
 }
 
 .main-title {
@@ -539,7 +538,7 @@ img {
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
-    margin: 0px;
+    margin: 0;
 }
 
 .about-title {
@@ -551,7 +550,7 @@ img {
 }
 
 .service-description-info {
-    margin: 0px;
+    margin: 0;
 }
 
 .button-service-item {
@@ -665,7 +664,7 @@ img {
 .footer-bottom-block {
     background-color: var(--basic-darken);
     margin-top: 54px;
-    padding: 35px 0px;
+    padding: 35px 0;
 }
 
 .footer-developed {
@@ -683,7 +682,7 @@ img {
 }
 
 .footer-bottom p {
-    margin: 0px;
+    margin: 0;
 }
 
 .footer-feedback-link.footer-small-text {
