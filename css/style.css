@@ -104,8 +104,8 @@
 
 body {
     min-width: 940px;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
@@ -172,7 +172,7 @@ img {
     gap: 20px;
 }
 
-.about-block {
+.about-block .container{
     display: grid;
     grid-template-columns: 1fr 300px;
 }
@@ -201,25 +201,10 @@ img {
 
 /* Flex */
 
-.about,
-.contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-top: 70px;
-}
-
 .signin-block {
-    height: 158px;
     display: flex;
-}
-
-.page-footer {
-    background-color: var(--basic-dark);
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding-top: 37px;
+    margin-bottom: 37px;
 }
 
 .footer-nav {
@@ -228,12 +213,12 @@ img {
     justify-content: flex-end;
 }
 
-.container.top {
+.footer-top {
     display: flex;
     justify-content: space-between;
 }
 
-.footer-bottom .container {
+.footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -242,8 +227,6 @@ img {
 /* Header */
 
 .toolbar {
-    width: 100%;
-    height: 42px;
     background-color: var(--basic-darken);
 }
 
@@ -267,9 +250,8 @@ img {
 }
 
 .main-nav {
-    width: 100%;
-    height: 320px;
     background-color: var(--gray-extra-light);
+    padding-bottom: 60px;
 }
 
 .signin-link {
@@ -302,8 +284,8 @@ img {
 
 .list-style-none {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 .site-navigation {
@@ -330,8 +312,7 @@ img {
 
 .container {
     width: 940px;
-    margin: 0 auto;
-    padding: 0;
+    margin: 0px auto;
 }
 
 /* Main */
@@ -351,7 +332,6 @@ img {
     font-size: 24px;
     line-height: 30px;
     color: var(--basic-white);
-    padding: 0px;
     margin: 0px;
 }
 
@@ -405,16 +385,15 @@ img {
     line-height: 36px;
     text-transform: uppercase;
     color: var(--basic-white);
-    margin: 0;
-    padding: 0;
+    margin: 0px;
 }
 
 .slider-text {
     font-size: 18px;
     line-height: 24px;
     color: var(--basic-white);
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 .transparent-black-bg {
@@ -460,8 +439,7 @@ img {
     line-height: 30px;
     text-transform: uppercase;
     color: var(--basic-dark);
-    margin: 0;
-    padding: 0;
+    margin: 0px;
 }
 
 .main-title {
@@ -544,22 +522,24 @@ img {
 .popular-producer-list,
 .about,
 .contacts {
-    margin-bottom: 70px; /* почему если я вставляю это значение с гридом оно не работает?*/
+    margin-bottom: 70px;
 }
 
-.service,
-.punchers {
-    position: relative;
+.about,
+.contacts {
+    padding-top: 70px;
+}
+
+.service {
     background-color: var(--gray-lighten);
-    height: 522px;
+    padding-bottom: 128px;
 }
 
 .black-title {
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
 }
 
 .about-title {
@@ -570,10 +550,8 @@ img {
     padding-top: 64px;
 }
 
-.service-description img {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
+.service-description-info {
+    margin: 0px;
 }
 
 .button-service-item {
@@ -630,7 +608,8 @@ img {
     line-height: 24px;
 }
 
-.punchers-info {
+.service-info,
+.service-description-info {
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
@@ -638,6 +617,10 @@ img {
 }
 
 /* Footer */
+
+.page-footer {
+    background-color: var(--basic-dark);
+}
 
 .top-list {
     padding-top: 37px;
@@ -679,9 +662,10 @@ img {
     opacity: 50%;
 }
 
-.footer-bottom {
+.footer-bottom-block {
     background-color: var(--basic-darken);
-    height: 107px;
+    margin-top: 54px;
+    padding: 35px 0px;
 }
 
 .footer-developed {
@@ -697,10 +681,9 @@ img {
     line-height: 18px;
     color: var(--basic-white);
 }
-.footer-bottom h3,
+
 .footer-bottom p {
-    padding: 0;
-    margin: 0;
+    margin: 0px;
 }
 
 .footer-feedback-link.footer-small-text {
