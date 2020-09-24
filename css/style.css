@@ -206,7 +206,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 70px 0px;
+    padding-top: 70px;
 }
 
 .signin-block {
@@ -541,7 +541,9 @@ img {
 }
 
 .popular-list,
-.popular-producer-list {
+.popular-producer-list,
+.about,
+.contacts {
     margin-bottom: 70px; /* почему если я вставляю это значение с гридом оно не работает?*/
 }
 
@@ -638,18 +640,17 @@ img {
 /* Footer */
 
 .top-list {
-    margin-top: 37px;
+    padding-top: 37px;
 }
 
 .bottom-list {
-    margin-top: 34px;
+    padding-top: 34px;
 }
 
 .footer-text {
     font-size: 18px;
     line-height: 24px;
     color: var(--gray-extra-light);
-    margin-top: 18px;
 }
 
 .top-list a {
