@@ -153,6 +153,9 @@ img {
     display: grid;
     grid-template-columns: 1fr max-content;
     margin-bottom: 20px;
+    background-color: var(--basic-brown);
+    height: 89px;
+    align-items: center;
 }
 
 .popular-list {
@@ -179,20 +182,6 @@ img {
     gap: 59px;
     width: 549px;
     margin-right: auto;
-}
-
-.bottom-list ul {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    gap: 59px;
-    width: 525px;
-    margin-left: auto;
-}
-
-.feedback-block {
-    display: grid;
-    grid-template-columns: min-content min-content;
-    gap: 51px;
 }
 
 /* Flex */
@@ -240,21 +229,28 @@ img {
     padding-bottom: 99px;
 }
 
-.about-description {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
 .footer-top {
     display: flex;
     justify-content: space-between;
+}
+
+.bottom-list ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bottom-list li:not(:first-child) {
+    margin-left: 59px;
 }
 
 .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.feedback-block {
+    display: flex;
 }
 
 /* Header */
@@ -505,8 +501,8 @@ img {
 
 .slider-gallery-button-block {
     position: absolute;/*оставил до следующего занятия, флекс убрал*/
-    margin-top: 18px;
-    margin-left: 24px;
+    top: 124px;
+    left: 24px;
 }
 
 .slider-gallery-button {
@@ -522,12 +518,6 @@ img {
 
 .button:active {
     background-color: var(--red-darken)
-}
-
-.popular-title-block {
-    background-color: var(--basic-brown);
-    height: 89px;
-    align-items: center;
 }
 
 .popular-title.dark-title {
@@ -714,7 +704,7 @@ img {
     background-color: var(--basic-dark);
     border: 0;
     margin: 0;
-    padding: 13.5px 0 17.5px 22px;
+    padding: 14px 0 18px 22px;
 }
 
 .button-service-item:hover {
@@ -792,7 +782,8 @@ img {
 }
 
 .button-about {
-    margin-top: 8px;
+    display: block;
+    margin-top: 20px;
     width: 220px;
 }
 
@@ -878,6 +869,10 @@ img {
 
 .footer-developed {
     margin-right: 13px;
+}
+
+.footer-feedback {
+    margin-right: 51px;
 }
 
 .social-button {
