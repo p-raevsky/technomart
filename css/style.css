@@ -161,7 +161,7 @@ img {
 .popular-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 18px;
 }
 
 .popular-producer-list {
@@ -202,6 +202,12 @@ img {
     display: flex;
 }
 
+.inner-page .signin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .site-navigation {
     display: flex;
     justify-content: space-between;
@@ -210,12 +216,23 @@ img {
     box-shadow: 0 5px var(--basic-darken);
 }
 
+.breadcrumbs {
+    display: flex;
+}
+
+.product-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
 .card-product {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     min-height: 318px;
+    width: 219px;
 }
 
 .card-product img {
@@ -223,10 +240,21 @@ img {
     margin-bottom: auto;
 }
 
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    /*margin-top: 28px; это не правильная запись и мне нужна помощь разобратьсмя почему в этом случае не работают марджинги и паддинги*/
+}
+
 .service-block {
     display: flex;
     margin-top: 70px;
     padding-bottom: 99px;
+}
+
+.pagination-list {
+    display: flex;
 }
 
 .footer-top {
@@ -303,7 +331,8 @@ img {
     margin-top: -3px;
 }
 
-.signin-link {
+.button-login,
+.button-registration {
     background-color: var(--basic-white);
     padding: 12px 24px;
 }
@@ -311,6 +340,7 @@ img {
 .button-login {
     margin-right: 10px;
 }
+
 
 .main-nav {
     background-color: var(--gray-extra-light);
@@ -323,8 +353,19 @@ img {
     color: var(--basic-black);
 }
 
+.button-signup {
+    width: 299px;
+    text-align: center;
+    padding: 12px 0;
+    background-color: var(--basic-white);
+}
+
 .signin-link:hover {
     color: var(--basic-red);
+}
+
+.button-signup:hover {
+    color: var(--basic-black);
 }
 
 .signin-link:active {
@@ -343,6 +384,10 @@ img {
 
 .my-profile-link:active {
     color: var(--Basic-greylight);
+}
+
+.account {
+    margin-left: 29px;
 }
 
 .list-style-none {
@@ -533,21 +578,69 @@ img {
 }
 
 .main-title {
+    display: block;
     background-color: var(--gray-second);
+    padding: 29px 0 30px 29px;
 }
 
-.breadcrumbs a {
+.filter-block {
+    width: 220px;
+    background-color: var(--brown-light);
+    margin-top: 20px;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+
+.sorting {
+    width: 700px;
+    background-color: var(--brown-light);
+    margin-top: 20px;
+    border-radius: 3px;
+    margin-bottom: 27px;
+}
+
+.filter-block span,
+.sorting span {
+    display: block;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
     color: var(--basic-black);
+    padding: 10px 0 10px 18px;
 }
 
 .product {
     background-color: var(--basic-white);
     border: 1px solid var(--gray-light);
     text-align: center;
+}
+
+.breadcrumbs a {
+    display: block;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+    margin-left: 41px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.inner-page .product {
+    margin-right: 18px;
+    margin-bottom: 17px;
+}
+
+.inner-page .product:nth-child(3n) {
+    margin-right: 0;
+}
+
+.inner-page .product:nth-last-child(1),
+.inner-page .product:nth-last-child(2),
+.inner-page .product:nth-last-child(3) {
+    margin-bottom: 0;
 }
 
 .product-title {
@@ -664,7 +757,8 @@ img {
     padding-top: 70px;
 }
 
-.service {
+.service,
+.punchers {
     background-color: var(--gray-lighten);
 }
 
@@ -720,6 +814,19 @@ img {
 .pagination-item {
     border: 1px solid var(--gray-another);
     border-radius: 2px;
+    padding: 5px 14px;
+    margin-top: 48px;
+    margin-bottom: 58px;
+    margin-right: 10px;
+}
+
+.pagination-item:first-child {
+    margin-left: 240px;
+}
+
+.pagination-item:last-child {
+    padding-left: 31px;
+    padding-right: 30px;
 }
 
 .pagination-item a {
@@ -747,6 +854,16 @@ img {
 .pagination-item:active {
     border: 1px solid var(--basic-red);
     border-radius: 2px;
+}
+
+.punchers-title {
+    padding-top: 65px;
+}
+
+.punchers-info {
+    padding-top: 25px;
+    margin: 0;
+    padding-bottom: 67px;
 }
 
 .about-description-first,
