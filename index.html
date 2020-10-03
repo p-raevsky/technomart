@@ -30,7 +30,13 @@
                         </p>
 
                         <div class="signin">
-                            <a class="signin-link button-login" href="blank.html">Войти</a>
+                            <a class="signin-link button-login" href="blank.html">
+                                <svg width="21" height="17" viewBox="0 0 21 17" fill="#C5C5C5" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z"/>
+                                    <path d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z"/>
+                                </svg>
+                                <span>Войти</span>
+                            </a>
                             <a class="signin-link button-registration" href="blank.html">Регистрация</a>
                         </div>
                     </div>
@@ -72,17 +78,31 @@
                             <a class="promo-item-link" href="#">Для стройки</a>
                         </li>
                         <li class="promo-item gallery">
-                            <section class="slider">
+                            <section class="slider slider-wrapper-1">
                                 <div class="transparent-black-bg">
-                                    <h2 class="slider-title">Перфораторы</h2>
+                                    <ul class="slider-list list-style-none">
+                                        <li class="slider-item slide-current">
+                                            <h2 class="slider-title">Перфораторы</h2>
 
-                                    <p class="slider-text">Настоящие мужские игрушки</p>
+                                            <p class="slider-text">Настоящие мужские игрушки</p>
+                                        </li>
+
+                                        <li class="slider-item">
+                                            <h2 class="slider-title">Дрели</h2>
+
+                                            <p class="slider-text">Соседям на радость!</p>
+                                        </li>
+                                    </ul>
                                 </div>
 
-                                <div class="slider-gallery-button-block">
-                                    <button class="button-back" type="button" disabled>Назад</button>
+                                <div class="slider-gallery-controls">
+                                    <button class="button-back" type="button" disabled></button>
+                                    <button class="button-next" type="button"></button>
+                                </div>
 
-                                    <button class="button-next" type="button">Вперед</button>
+                                <div class="slider-controls">
+                                    <button class="current" type="button" aria-label="Первый слайд"></button>
+                                    <button type="button" aria-label="Второй слайд"></button>
                                 </div>
 
                                 <a class="button slider-gallery-button" href="catalog.html">Открыть каталог</a>
@@ -111,6 +131,8 @@
 
                     <ul class="popular-list list-style-none">
                         <li class="product popular-item">
+                            <span class="new visually-hidden"></span>
+
                             <div class="card-hover">
                                 <a class="button-buy" href="#">Купить</a>
                                 <a class="button-bookmark" href="#">В закладки</a>
@@ -118,12 +140,16 @@
 
                             <div class="card-product">
                                 <h3 class="product-title">Перфоратор BOSCH BFG 9000</h3>
-                                <img src="img/product-3.jpg" width="184" height="164" alt="Перфоратор BOSCHBFG 9000">
+                                <div class="product-img">
+                                    <img src="img/product-3.jpg" width="184" height="164" alt="Перфоратор BOSCHBFG 9000">
+                                </div>
                                 <del>32500 Р.</del>
-                                <button class="button product-button" type="button">25500 Р.</button>
+                                <span class="product-button">25500 Р.</span>
                             </div>
                         </li>
                         <li class="product popular-item">
+                            <span class="new"></span>
+
                             <div class="card-hover">
                                 <a class="button-buy" href="#">Купить</a>
                                 <a class="button-bookmark" href="#">В закладки</a>
@@ -131,12 +157,16 @@
 
                             <div class="card-product">
                                 <h3 class="product-title">Перфоратор BOSCH BFG 3000</h3>
-                                <img src="img/product-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                                <div class="product-img">
+                                    <img src="img/product-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                                </div>
                                 <del>22500 Р.</del>
-                                <button class="button product-button" type="button">15500 Р.</button>
+                                <span class="product-button">15500 Р.</span>
                             </div>
                         </li>
                         <li class="product popular-item">
+                            <span class="new visually-hidden"></span>
+
                             <div class="card-hover">
                                 <a class="button-buy" href="#">Купить</a>
                                 <a class="button-bookmark" href="#">В закладки</a>
@@ -144,12 +174,16 @@
 
                             <div class="card-product">
                                 <h3 class="product-title">Перфоратор BOSCH BFG 6000</h3>
-                                <img src="img/product-1.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                                <div class="product-img">
+                                    <img src="img/product-1.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                                </div>
                                 <del>30500 Р.</del>
-                                <button class="button product-button" type="button">25500 Р.</button>
+                                <span class="product-button">25500 Р.</span>
                             </div>
                         </li>
                         <li class="product popular-item">
+                            <span class="new"></span>
+
                             <div class="card-hover">
                                 <a class="button-buy" href="#">Купить</a>
                                 <a class="button-bookmark" href="#">В закладки</a>
@@ -157,8 +191,10 @@
 
                             <div class="card-product without-del">
                                 <h3 class="product-title">Перфоратор BOSCH BFG 2000</h3>
-                                <img src="img/product-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
-                                <button class="button product-button" type="button">12500 Р.</button>
+                                <div class="product-img">
+                                    <img src="img/product-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                                </div>
+                                <span class="product-button">12500 Р.</span>
                             </div>
                         </li>
                     </ul>
@@ -225,19 +261,41 @@
                         Хороший интернет-магазин отличается от плохого не только ценами!<br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
                     </p>
 
-                    <div class="service-block">
+                    <div class="service-block service-wrapper-3">
                         <div class="button-service">
                             <button class="button-service-item" type="button">Доставка</button>
                             <button class="button-service-item" type="button">Гарантия</button>
-                            <button class="button-service-item" type="button">Кредит</button>
+                            <button class="button-service-item button-service-current" type="button">Кредит</button>
                         </div>
 
                         <div class="service-description">
-                            <h3 class="service-description-title dark-title">Доставка</h3>
+                            <ul class="service-description-list list-style-none">
+                                <li class="service-description-item">
+                                    <h3 class="service-description-title dark-title">Доставка</h3>
 
-                            <p class="service-description-info">
-                                Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!
-                            </p>
+                                    <p class="service-description-info">
+                                        Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!
+                                    </p>
+                                </li>
+
+                                <li class="service-description-item">
+                                    <h3 class="service-description-title dark-title">Гарантия</h3>
+
+                                    <p class="service-description-info">
+                                        Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.
+                                    </p>
+                                </li>
+
+                                <li class="service-description-item service-description-curent">
+                                    <h3 class="service-description-title dark-title">Кредит</h3>
+
+                                    <p class="service-description-info">
+                                        Залезть в долговую яму стало проще!<br> Кредитные консультанты придут вам на помощь.
+                                    </p>
+
+                                    <a class="button button-credit" href="#">Отправить заявку</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -338,9 +396,20 @@
                         <h3 class="visually-hidden">Социальные сети</h3>
 
                         <ul class="list-style-none">
-                            <li><a class="social-button" href="#">Вконтакте</a></li>
-                            <li><a class="social-button" href="#">Фейсбук</a></li>
-                            <li><a class="social-button" href="#">Инстаграм</a></li>
+                            <li><a class="social-button vk" href="#">
+                                    <span class="visually-hidden">Вконтакте</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="social-button fb" href="#">
+                                    <span class="visually-hidden">Фейсбук</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="social-button insta" href="#">
+                                    <span class="visually-hidden">Инстаграм</span>
+                                </a>
+                            </li>
                         </ul>
                     </section>
 
