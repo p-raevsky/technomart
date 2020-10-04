@@ -68,7 +68,7 @@
     --basic-black-lighten: #212A3A;
     --basic-dark: #32425C;
     --basic-darken: #293449;
-    --basic-darkest:#1D2739;
+    --basic-darkest: #1D2739;
     --basic-extra-dark: #293449;
     --basic-dark-lighten: #3D546F;
     --basic-white: #FFFFFF;
@@ -252,7 +252,7 @@ img {
     align-items: center;
     min-height: 318px;
     width: 219px;
-    background-color: white;
+    background-color: var(--basic-white);
     position: relative;
 }
 
@@ -361,7 +361,6 @@ img {
 }
 
 .button-login svg {
-    content: "";
     position: absolute;
     width: 20px;
     height: 17px;
@@ -499,34 +498,38 @@ img {
     width: 135px;
 }
 
-.materials {
+.promo-item {
     position: relative;
+}
+
+.materials {
     background-color: var(--basic-orange);
 }
 
 .tool {
-    position: relative;
     background-color: var(--basic-blue);
 }
 
 .technics {
-    position: relative;
     background-color: var(--basic-violet);
 }
 
 .discounts {
-    position: relative;
     background-color: var(--green-lighten);
 }
 
 .delivery {
-    position: relative;
     background-color: var(--basic-orange);
 }
 
-.materials h3::before {
+.promo-item::after,
+.new::before {
     content: "";
     position: absolute;
+}
+
+.new::before {
+    z-index: 3;
     top: 0;
     right: 0;
     width: 70px;
@@ -534,9 +537,7 @@ img {
     background-image: url("../img/new.svg");
 }
 
-.materials h3::after {
-    content: "";
-    position: absolute;
+.materials::after {
     top: 31px;
     right: 43px;
     width: 44px;
@@ -544,9 +545,7 @@ img {
     background-image: url("../img/icon-materials.svg");
 }
 
-.tool h3::after {
-    content: "";
-    position: absolute;
+.tool::after {
     top: 34px;
     right: 31px;
     width: 75px;
@@ -554,9 +553,7 @@ img {
     background-image: url("../img/icon-tool.svg");
 }
 
-.technics h3::after {
-    content: "";
-    position: absolute;
+.technics::after {
     top: 31px;
     right: 31px;
     width: 78px;
@@ -564,9 +561,7 @@ img {
     background-image: url("../img/icon-technics.svg");
 }
 
-.discounts h3::after {
-    content: "";
-    position: absolute;
+.discounts::after {
     top: 26px;
     right: 45px;
     width: 59px;
@@ -574,9 +569,7 @@ img {
     background-image: url("../img/icon-discounts.svg");
 }
 
-.delivery h3::after {
-    content: "";
-    position: absolute;
+.delivery::after {
     top: 32px;
     right: 31px;
     width: 78px;
@@ -610,10 +603,12 @@ img {
 
 .slider-wrapper-1 {
     background-image: url("../img/slider-perforator.jpg");
+    background-color: var(--gray-darken);
 }
 
 .slider-wrapper-2 {
     background-image: url("../img/slider-drill.jpg");
+    background-color: var(--gray-darken);
 }
 
 .slider-item {
@@ -666,29 +661,24 @@ img {
     background-color: unset;
 }
 
-.button-back::before {
+.gallery-controls::before {
     content: "";
     position: absolute;
     width: 22px;
     height: 40px;
     top: 0;
-    left: 0;
     background-image: url("../img/icon-left.svg");
-    transform: rotate(180deg);
     background-repeat: no-repeat;
     background-position: 0 0;
 }
 
+.button-back::before {
+    left: 0;
+    transform: rotate(180deg);
+}
+
 .button-next::before {
-    content: "";
-    position: absolute;
-    width: 22px;
-    height: 40px;
-    top: 0;
     right: 0;
-    background-image: url("../img/icon-left.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
 }
 
 .slider-controls {
@@ -738,7 +728,7 @@ img {
     font-weight: 400;
 }
 
-.popular-title.dark-title {
+.popular-title {
     margin-left: 28px;
 }
 
@@ -782,17 +772,6 @@ img {
     text-align: center;
 }
 
-.new::before {
-    z-index: 1001;
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 70px;
-    height: 70px;
-    background-image: url("../img/new.svg");
-}
-
 .breadcrumbs a {
     display: block;
     font-family: "PT Sans", Arial, sans-serif;
@@ -833,7 +812,7 @@ img {
     font-weight: 700;
     font-size: 17px;
     color: var(--basic-white);
-    background-color: var(--basic-red); /*оставил, чтобы на случай, если не прогрузится свг, было видно белый текст*/
+    background-color: var(--basic-red);
     line-height: 18px;
     padding: 9px;
     z-index: 1;
@@ -860,7 +839,7 @@ img {
 }
 
 .card-hover {
-    z-index: 1000;
+    z-index: 2;
     position: absolute;
     font-size: 14px;
     line-height: 18px;
@@ -1048,32 +1027,29 @@ img {
     background-position: 0 0;
 }
 
-.service-wrapper-1::after {
+.service-block::after {
     position: absolute;
     content: "";
+    bottom: 0;
+}
+
+.service-wrapper-1::after {
     width: 468px;
     height: 261px;
-    bottom: 0;
     right: 0;
     background-image: url("../img/service.png");
 }
 
 .service-wrapper-2::after {
-    position: absolute;
-    content: "";
     width: 389px;
     height: 283px;
-    bottom: 0;
     right: 0;
     background-image: url("../img/guarantee.png");
 }
 
 .service-wrapper-3::after {
-    position: absolute;
-    content: "";
     width: 465px;
     height: 285px;
-    bottom: 0;
     right: -10px;
     background-image: url("../img/credit.png");
 }
@@ -1298,36 +1274,29 @@ img {
     background-color: var(--basic-red);
 }
 
-.vk::before {
+.social-button::before {
     content: "";
     position: absolute;
-    width: 26px;
-    height: 15px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.vk::before {
+    width: 26px;
+    height: 15px;
     background-image: url("../img/icon-vk.svg");
 }
 
 .fb::before {
-    content: "";
-    position: absolute;
     width: 12px;
     height: 22px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-image: url("../img/icon-fb.svg");
 }
 
 .insta::before {
-    content: "";
-    position: absolute;
     width: 21px;
     height: 21px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-image: url("../img/icon-insta.svg");
 }
 
