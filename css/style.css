@@ -203,6 +203,19 @@ img {
     margin-right: auto;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /* Flex */
 
 .toolbar .container {  /*с помощью флекса расставлю потом остальные элементы тулбара*/
@@ -213,15 +226,28 @@ img {
     display: flex;
     margin-top: 41px;
     margin-bottom: 41px;
-    justify-content: space-between;
     align-items: flex-start;
 }
 
 .signin {
+    margin-left: auto;
+}
+
+.signin-login,
+.signin-my-profile { /*233-240 строчки вынес перед флекс, чтобы не ломать все то, что было сделано*/
+    display: none;
+}
+
+.signin-current {
+    display: block;
+}
+
+.signin-current.signin-login {
     display: flex;
 }
 
-.inner-page .signin {
+.signin-current.signin-my-profile {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -237,6 +263,7 @@ img {
 
 .breadcrumbs {
     display: flex;
+    padding-left: 14px;
 }
 
 .product-block {
@@ -331,6 +358,7 @@ img {
     font-size: 14px;
     line-height: 24px;
     margin-top: 3px;
+    margin-left: 93px;
 }
 
 .header-phone {
@@ -365,7 +393,7 @@ img {
     width: 20px;
     height: 17px;
     padding: 14px 82px 14px 19px;
-  }
+}
 
 .button-login svg:hover {
     fill: var(--basic-dark-lighten);
@@ -383,10 +411,49 @@ img {
 }
 
 .button-signup {
+    display: block;
     width: 299px;
     text-align: center;
     padding: 12px 0;
     background-color: var(--basic-white);
+    position: relative;
+}
+
+.signin-button-block {
+    position: relative;
+}
+
+.svg-user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 13px 207px 14px 15px;
+}
+
+.svg-user:hover {
+    fill: var(--basic-dark-lighten);
+}
+
+.svg-user:active {
+    fill: var(--Basic-greylight);
+}
+
+.logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.svg-logout {
+    padding: 14px 17px 14px 20px;
+}
+
+.svg-logout:hover {
+    fill: var(--basic-dark-lighten);
+}
+
+.svg-logout:active {
+    fill: var(--Basic-greylight);
 }
 
 .signin-link:hover {
@@ -401,10 +468,15 @@ img {
     color: var(--Basic-greylight);
 }
 
+.my-profile {
+    padding-top: 6px;
+}
+
 .my-profile-link {
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-dark);
+    position: relative;
 }
 
 .my-profile-link:hover {
@@ -413,6 +485,17 @@ img {
 
 .my-profile-link:active {
     color: var(--Basic-greylight);
+}
+
+.orders::after {
+    position: absolute;
+    content: "";
+    top: 8px;
+    right: -18px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--basic-dark);
 }
 
 .account {
@@ -446,19 +529,6 @@ img {
 }
 
 /* Main */
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
 
 .promo {
     margin-top: 59px;
@@ -782,6 +852,33 @@ img {
     margin-left: 41px;
     margin-top: 20px;
     margin-bottom: 20px;
+    position: relative;
+}
+
+.breadcrumbs {
+    position: relative;
+}
+
+.breadcrumbs a::before,
+.breadcrumbs li:first-child::before {
+    position: absolute;
+    content: "";
+}
+
+.breadcrumbs a::before {
+    width: 8px;
+    height: 14px;
+    top: 3px;
+    left: -24px;
+    background: url("../img/icon-right-small.svg") no-repeat 0 0;
+}
+
+.breadcrumbs li:first-child::before {
+    width: 14px;
+    height: 12px;
+    top: 23px;
+    left: 2px;
+    background: url("../img/icon-home.svg") no-repeat 0 0;
 }
 
 .product-title {
