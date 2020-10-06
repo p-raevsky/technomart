@@ -599,7 +599,7 @@ img {
 }
 
 .new::before {
-    z-index: 3;
+    z-index: 2;
     top: 0;
     right: 0;
     width: 70px;
@@ -911,7 +911,7 @@ img {
     color: var(--basic-white);
     background-color: var(--basic-red);
     line-height: 18px;
-    padding: 9px;
+    padding: 9px 24px;
     z-index: 1;
 }
 
@@ -936,32 +936,42 @@ img {
 }
 
 .card-hover {
-    z-index: 2;
     position: absolute;
     font-size: 14px;
     line-height: 18px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    left: 0;
+    top: 0;
     opacity: 0;
-    padding: 38px 44px 194px 41px;
+    padding: 38px 44px 193px 41px;
 }
 
 .card-hover:hover {
     opacity: 1;
     box-shadow: 0 4px 20px var(--black-opacity-15);
     background-image: linear-gradient(180deg, var(--basic-white) 50%, transparent 50%);
+    z-index: 1;
 }
 
 .button-buy {
     display: block;
-    width: 135px;
     border-radius: 2px;
     text-transform: uppercase;
     color: var(--basic-white);
     background-color: var(--basic-green);
-    padding-top: 10px;
-    padding-bottom: 7px;
+    padding: 10px 15px 7px 27px;
     box-shadow: 0 3px var(--green-shadow);
+    position: relative;
+}
+
+.button-buy::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 10px;
+    left: 30px;
+    background: url("../img/icon-cart.svg") no-repeat 0 0;
+    opacity: 0.3;
 }
 
 .button-buy:hover {
