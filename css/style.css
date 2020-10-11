@@ -105,6 +105,8 @@
     --gray-extra-light: #F3F7F9;
     --gray-another: #E5E5E5;
     --gray-second: #F2F6F8;
+    --gray-feedback-bg: #F4F4F4;
+    --gray-cart-bg: #F1F1F1;
 }
 
 /* Global */
@@ -171,7 +173,6 @@ img {
 .product-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 18px;
     grid-row-gap: 16px;
     width: 700px;
@@ -233,7 +234,7 @@ img {
 }
 
 .signin-login,
-.signin-my-profile { /*233-240 строчки вынес перед флекс, чтобы не ломать все то, что было сделано*/
+.signin-my-profile {
     display: none;
 }
 
@@ -411,9 +412,9 @@ img {
 
 .button-signup {
     display: block;
-    width: 299px;
+    width: 219px;
     text-align: center;
-    padding: 12px 0;
+    padding: 12px 40px;
     background-color: var(--basic-white);
     position: relative;
 }
@@ -1430,4 +1431,184 @@ img {
 .footer-developed-link:active {
     text-decoration: none;
     color: var(--basic-red);
+}
+
+/* Modal */
+
+.modal {
+    box-shadow: 0px 4px 20px var(--black-opacity-15);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--gray-feedback-bg);
+    border-top: 7px solid var(--red-light);
+    z-index: 2;
+  }
+
+/* Modal close  */
+
+.modal-close {
+    position: absolute;
+    content: "";
+    width: 21px;
+    height: 21px;
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+}
+
+.modal-close::before,
+.modal-close::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -4px;
+    width: 29px;
+    height: 4px;
+    background-color: var(--basic-red);
+}
+
+.modal-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-close::after {
+    transform: rotate(-45deg);
+}
+
+.modal-feedback .modal-close {
+    top: 14px;
+    right: 11px;
+}
+
+.modal-map .modal-close {
+    top: 10px;
+    right: 10px;
+}
+
+.modal-cart .modal-close {
+    top: 11px;
+    right: 11px;
+}
+
+/* Modal feedback */
+
+.feedback-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 37px;
+    align-items: center;
+}
+
+.feedback-form-block {
+    background-color: var(--basic-white);
+    padding: 38px 80px 29px;
+}
+
+.feedback-form-block div {
+    display: flex;
+}
+
+.feedback-first-row p:first-of-type {
+    margin-right: 20px;
+}
+
+.feedback-form-block p {
+    margin: 0;
+}
+
+.feedback-text-letter {
+    margin-top: 13px;
+}
+
+.feedback-text {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 11px;
+}
+
+.button-feedback-send {
+    width: 460px;
+    margin-top: 37px;
+}
+
+.feedback-form-field {
+    box-sizing: border-box;
+    padding: 7px 0 7px 12px;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--gray-darken);
+    width: 220px;
+    border: 2px solid var(--Basic-greylight);
+    border-radius: 2px;
+}
+
+.feedback-letter {
+    width: 460px;
+    padding: 0;
+    padding-top: 7px;
+    padding-left: 12px;
+    padding-bottom: 56px;
+}
+
+/* Modal map */
+
+.modal-map {
+    width: 943px;
+    height: 449px;
+}
+
+/* Modal cart */
+
+.modal-cart {
+    width: 620px;
+}
+
+.added-cart {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 69px 175px 71px;
+    text-align: center;
+    background: url("/img/icon-mark.svg") no-repeat 81px 48px;
+    background-color: var(--basic-white);
+}
+
+.modal-cart div {
+    display: flex;
+    justify-content: center;
+    padding: 37px 0;
+    background-color: var(--gray-cart-bg);
+}
+
+.button-checkout {
+    padding-left: 47px;
+    padding-right: 46px;
+}
+
+.button-continue {
+    padding-left: 32px;
+    padding-right: 31px;
+    margin-left: 10px;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+.button-continue:hover {
+    background-color: var(--basic-white); /* Перебил ховер состояние кнопки по умолчанию*/
+    color: var(--basic-black);
+}
+
+.button-continue:active {
+    color: var(--Basic-greylight); /* По ТЗ нет, но добавил актив состояние */
+}
+
+.modal-feedback,
+.modal-map,
+.modal-cart {
+    display: none;
 }
