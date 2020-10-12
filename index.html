@@ -458,36 +458,33 @@
         <section class="modal modal-feedback">
             <h2 class="visually-hidden">Написать нам письмо</h2>
             <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-                <div class="feedback-form-wrapper">
-                    <div class="feedback-form-block">
-                        <div class="feedback-first-row">
-                            <p>
-                                <label class="feedback-text" for="user-name-field">Ваше имя:</label>
-                                <input class="feedback-form-field feedback-name" id="user-name-field" type="text" name="user-name" placeholder="Имя Фамилия" required>
-                            </p>
+                <div class="feedback-form-block">
+                    <label class="feedback-text">
+                        Ваше имя:<br>
+                        <input class="feedback-form-field feedback-name" type="text" name="user-name" placeholder="Имя Фамилия" required>
+                    </label>
 
-                            <p>
-                                <label class="feedback-text" for="user-email-field">Ваш e-mail:</label>
-                                <input class="feedback-form-field feedback-email" id="user-email-field" type="email" name="user-email" placeholder="email@example.com" required>
-                            </p>
-                        </div>
+                    <label class="feedback-text feedback-text-email">
+                        Ваш e-mail:<br>
+                        <input class="feedback-form-field feedback-email" type="email" name="user-email" placeholder="email@example.com" required>
+                    </label>
 
-                        <p>
-                            <label class="feedback-text feedback-text-letter" for="letter-field">Текст письма:</label>
-                            <textarea class="feedback-form-field feedback-letter" name="letter" id="letter-field" required>В свободной форме</textarea>
-                        </p>
-                    </div>
-
-                    <button class="button button-feedback-send" type="button">Отправить</button>
+                    <label class="feedback-text feedback-text-letter">
+                        Текст письма:<br>
+                        <textarea class="feedback-form-field feedback-letter" name="letter" required placeholder="В свободной форме"></textarea>
+                    </label>
                 </div>
+
+                <button class="button button-feedback-send" type="submit">Отправить</button>
             </form>
-            <button class="modal-close" type="button" aria-label="Закрыть"></button>
+            <a class="modal-close" href="#" aria-label="Закрыть"></a>
         </section>
 
         <section class="modal modal-map">
             <h2 class="visually-hidden">Как до нас добраться</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1602434682118!5m2!1sru!2sua" width="943" height="449" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург"></iframe>
-            <button class="modal-close" type="button" aria-label="Закрыть"></button>
+            <img src="img/map-big.png" width="943" height="449" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+            <a class="modal-close" href="#" aria-label="Закрыть"></a>
         </section>
 
     </body>
