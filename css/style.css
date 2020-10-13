@@ -1539,7 +1539,7 @@ img {
     display: block;
 }
 
-iframe {
+.modal-map-iframe {
     position: absolute;
     content: "";
     width: 100%;
