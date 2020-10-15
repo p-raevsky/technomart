@@ -16,7 +16,32 @@
                             <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип «Техномарт»">
                         </a>
 
-                        <!-- Здесь будет форма поиска, закладкок, корзины, оформления заказа -->
+                        <form class="toolbar-form" method="post" action="https://echo.htmlacademy.ru">
+                            <label class="visually-hidden" for="search-field">Строка поиска</label>
+                            <input class="search-field" type="search" name="search" id="search-field">
+                            <svg aria-hidden="true" focusable="false" width="17" height="17" viewbox="0 0 17 17" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"/>
+                            </svg>
+                            <span class="search-field-text">Поиск:</span>
+                        </form>
+
+                        <a class="toolbar-counter bookmark-counter" href="#" aria-label="Добавлено в закладки">
+                            <svg aria-hidden="true" focusable="false" width="14" height="16" viewbox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z" fill="white"/>
+                            </svg>
+                            Закладки: 0
+                        </a>
+
+                        <a class="toolbar-counter cart-counter" href="#" aria-label="Добавлено в корзину">
+                            <svg aria-hidden="true" focusable="false" width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="white"/>
+                                <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
+                                <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
+                            </svg>
+                            Корзина: 0
+                        </a>
+
+                        <a class="button-toolbar-checkout" href="blank.html">Оформить заказ</a>
                     </div>
                 </div>
 
@@ -32,7 +57,7 @@
                         <div class="signin">
                             <div class="signin-login signin-current">
                                 <a class="signin-link button-login" href="blank.html">
-                                    <svg width="21" height="17" viewBox="0 0 21 17" fill="#C5C5C5" xmlns="http://www.w3.org/2000/svg">
+                                    <svg aria-hidden="true" focusable="false" width="21" height="17" viewbox="0 0 21 17" fill="#C5C5C5" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z"/>
                                         <path d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z"/>
                                     </svg>
@@ -44,13 +69,13 @@
                             <div class="signin-my-profile">
                                 <div class="signin-button-block">
                                     <a class="signin-link button-signup" href="#">
-                                        <svg class="svg-user" width="20" height="18" viewBox="0 0 20 18" fill="#C5C5C5" xmlns="http://www.w3.org/2000/svg">
+                                        <svg aria-hidden="true" focusable="false" class="svg-user" width="20" height="18" viewbox="0 0 20 18" fill="#C5C5C5" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.881 14.166C15.737 13.431 13.625 12.5 12.674 11.776C12.017 11.275 11.904 10.158 12.157 9.361C13.275 8.458 14.021 6.884 14.021 5.083C14.021 2.276 12.221 0 10 0C7.77902 0 5.97901 2.276 5.97901 5.083C5.97901 6.884 6.72501 8.457 7.84201 9.36C8.09501 10.158 7.98302 11.275 7.32502 11.776C6.37502 12.5 4.26201 13.43 2.11801 14.166C-0.0259852 14.902 1.48343e-05 18 1.48343e-05 18H20C20 18 20.025 14.901 17.881 14.166Z"/>
                                         </svg>
                                         <span>Равшан Джамшутович</span>
                                     </a>
                                     <a class="logout" href="#">
-                                        <svg class="svg-logout" width="20" height="17" viewBox="0 0 20 17" fill="#C5C5C5" xmlns="http://www.w3.org/2000/svg">
+                                        <svg aria-hidden="true" focusable="false" class="svg-logout" width="20" height="17" viewbox="0 0 20 17" fill="#C5C5C5" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z"/>
                                             <path d="M2.10598 13.952V3.048C2.12398 2.672 2.27698 1.991 3.11598 1.991H8.14297V0H3.11598C0.937975 0 0.111975 1.81 0.0869751 3.027V13.973C0.111975 15.189 0.937975 17 3.11598 17H8.14297V15.01H3.11598C2.27698 15.01 2.12398 14.327 2.10598 13.952Z"/>
                                         </svg>
@@ -66,8 +91,8 @@
                         </div>
                     </div>
 
-                    <ul class="site-navigation list-style-none">
-                        <li><a>Главная</a></li>
+                    <ul class="site-navigation list-style-none" aria-label="Навигация по сайту">
+                        <li><a aria-current="page">Главная</a></li>
                         <li><a href="blank.html">Компания</a></li>
                         <li><a href="catalog.html">Каталог</a></li>
                         <li><a href="blank.html">Новости</a></li>
@@ -102,6 +127,16 @@
 
                             <a class="promo-item-link" href="#">Для стройки</a>
                         </li>
+                        <li class="promo-item discounts">
+                            <h3 class="promo-item-title">Скидка 50%</h3>
+
+                            <a class="promo-item-link" href="#">На 350 товаров</a>
+                        </li>
+                        <li class="promo-item delivery">
+                            <h3 class="promo-item-title">Доставка</h3>
+
+                            <a class="promo-item-link" href="#">Бесплатно</a>
+                        </li>
                         <li class="promo-item gallery">
                             <section class="slider slider-wrapper-1">
                                 <div class="transparent-black-bg">
@@ -121,8 +156,8 @@
                                 </div>
 
                                 <div class="slider-gallery-controls">
-                                    <button class="gallery-controls button-back" type="button" disabled></button>
-                                    <button class="gallery-controls button-next" type="button"></button>
+                                    <button class="gallery-controls button-back" type="button" disabled aria-label="Кнопка назад"></button>
+                                    <button class="gallery-controls button-next" type="button" aria-label="Кнопка вперёд"></button>
                                 </div>
 
                                 <div class="slider-controls">
@@ -132,16 +167,6 @@
 
                                 <a class="button slider-gallery-button" href="catalog.html">Открыть каталог</a>
                             </section>
-                        </li>
-                        <li class="promo-item discounts">
-                            <h3 class="promo-item-title">Скидка 50%</h3>
-
-                            <a class="promo-item-link" href="#">На 350 товаров</a>
-                        </li>
-                        <li class="promo-item delivery">
-                            <h3 class="promo-item-title">Доставка</h3>
-
-                            <a class="promo-item-link" href="#">Бесплатно</a>
                         </li>
                     </ul>
                 </div>
@@ -158,11 +183,11 @@
                         <li class="product popular-item">
                             <div class="card-product">
                                 <div class="product-img">
-                                    <img src="img/product-3.jpg" width="184" height="164" alt="Перфоратор BOSCHBFG 9000">
+                                    <img src="img/product-3.jpg" width="184" height="164" alt="">
 
                                     <div class="card-hover">
-                                        <a class="button-buy" href="#">Купить</a>
-                                        <a class="button-bookmark" href="#">В закладки</a>
+                                        <a class="button-buy" href="#" aria-label="Добавить Перфоратор BOSCH BFG 9000 в корзину">Купить</a>
+                                        <a class="button-bookmark" href="#" aria-label="Добавить Перфоратор BOSCH BFG 9000 в закладки">В закладки</a>
                                     </div>
                                 </div>
                                 <a href="#">
@@ -175,11 +200,11 @@
                         <li class="product popular-item ">
                             <div class="card-product new">
                                 <div class="product-img">
-                                    <img src="img/product-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                                    <img src="img/product-2.jpg" width="127" height="112" alt="">
 
                                     <div class="card-hover">
-                                        <a class="button-buy" href="#">Купить</a>
-                                        <a class="button-bookmark" href="#">В закладки</a>
+                                        <a class="button-buy" href="#" aria-label="Добавить Перфоратор BOSCH BFG 3000 в корзину">Купить</a>
+                                        <a class="button-bookmark" href="#" aria-label="Добавить Перфоратор BOSCH BFG 3000 в закладки">В закладки</a>
                                     </div>
                                 </div>
                                 <a href="#">
@@ -192,11 +217,11 @@
                         <li class="product popular-item">
                             <div class="card-product">
                                 <div class="product-img">
-                                    <img src="img/product-1.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                                    <img src="img/product-1.jpg" width="144" height="128" alt="">
 
                                     <div class="card-hover">
-                                        <a class="button-buy" href="#">Купить</a>
-                                        <a class="button-bookmark" href="#">В закладки</a>
+                                        <a class="button-buy" href="#" aria-label="Добавить Перфоратор BOSCH BFG 6000 в корзину">Купить</a>
+                                        <a class="button-bookmark" href="#" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">В закладки</a>
                                     </div>
                                 </div>
                                 <a href="#">
@@ -209,11 +234,11 @@
                         <li class="product popular-item">
                             <div class="card-product without-del new">
                                 <div class="product-img">
-                                    <img src="img/product-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                                    <img src="img/product-2.jpg" width="127" height="112" alt="">
 
                                     <div class="card-hover">
-                                        <a class="button-buy" href="#">Купить</a>
-                                        <a class="button-bookmark" href="#">В закладки</a>
+                                        <a class="button-buy" href="#" aria-label="Добавить Перфоратор BOSCH BFG 2000 в корзину">Купить</a>
+                                        <a class="button-bookmark" href="#" aria-label="Добавить Перфоратор BOSCH BFG 2000 в закладки">В закладки</a>
                                     </div>
                                 </div>
                                 <a href="#">
@@ -286,16 +311,16 @@
                         Хороший интернет-магазин отличается от плохого не только ценами!<br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
                     </p>
 
-                    <div class="service-block service-wrapper-3">
+                    <div class="service-block service-wrapper-1">
                         <div class="button-service">
-                            <button class="button-service-item" type="button">Доставка</button>
+                            <button class="button-service-item button-service-current" type="button">Доставка</button>
                             <button class="button-service-item" type="button">Гарантия</button>
-                            <button class="button-service-item button-service-current" type="button">Кредит</button>
+                            <button class="button-service-item" type="button">Кредит</button>
                         </div>
 
                         <div class="service-description">
                             <ul class="service-description-list list-style-none">
-                                <li class="service-description-item">
+                                <li class="service-description-item service-description-curent">
                                     <h3 class="service-description-title dark-title">Доставка</h3>
 
                                     <p class="service-description-info">
@@ -311,7 +336,7 @@
                                     </p>
                                 </li>
 
-                                <li class="service-description-item service-description-curent">
+                                <li class="service-description-item">
                                     <h3 class="service-description-title dark-title">Кредит</h3>
 
                                     <p class="service-description-info">
@@ -386,7 +411,7 @@
                     </section>
                 </div>
 
-                <ul class="footer-nav list-style-none">
+                <ul class="footer-nav list-style-none" aria-label="Навигация по сайту">
                     <li class="top-list">
                         <ul class="list-style-none">
                             <li><a class="footer-text" href="blank.html">Компания</a></li>
