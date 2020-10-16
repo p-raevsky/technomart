@@ -364,7 +364,6 @@ img {
 }
 
 .search-field,
-.search-field-text,
 .toolbar-counter,
 .button-toolbar-checkout {
     font-size: 18px;
@@ -373,17 +372,16 @@ img {
     padding: 9px 0;
 }
 
-.search-field-text {
-    position: absolute;
-    top: 0;
-    left: 42px;
-}
-
 .search-field {
     width: 100%;
     padding-left: 42px;
     background-color: transparent;
     border: 0;
+}
+
+.search-field::placeholder {
+    color: var(--basic-white);
+    opacity: 1;
 }
 
 .toolbar-form svg {
@@ -404,11 +402,6 @@ img {
 .toolbar-form:focus-within svg {
     fill: var(--basic-red);
     opacity: 1;
-}
-
-.toolbar-form:focus .search-field-text,
-.toolbar-form:focus-within .search-field-text {
-    opacity: 0;
 }
 
 .toolbar-form:focus-within .search-field{
