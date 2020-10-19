@@ -181,7 +181,7 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 19px;
-    grid-row-gap: 17px;
+    grid-row-gap: 19px;
     width: 700px;
 }
 
@@ -285,7 +285,7 @@ img {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    min-height: 317px;
+    min-height: 316px;
     width: 219px;
     background-color: var(--basic-white);
     position: relative;
@@ -370,7 +370,7 @@ img {
     font-size: 18px;
     line-height: 24px;
     color: var(--basic-white);
-    padding: 9px 0;
+    padding: 10px 0 8px;
 }
 
 .search-field {
@@ -470,8 +470,8 @@ img {
 
 .button-toolbar-checkout {
     background-color: var(--basic-green);
-    padding-right: 16px;
-    padding-left: 19px;
+    padding-right: 17px;
+    padding-left: 18px;
 }
 
 .button-toolbar-checkout:hover {
@@ -501,26 +501,25 @@ img {
     text-align: center;
     font-size: 14px;
     line-height: 24px;
-    margin-top: 11px;
     margin-left: 93px;
     position: relative;
 }
 
 .header-phone {
     display: block;
-    padding: 3px 0 6px 29px;
+    padding: 4px 0 3px 29px;
     font-weight: 700;
     font-size: 21px;
     line-height: 32px;
     color: var(--basic-red);
     border: 3px solid var(--basic-white);
-    margin-top: -9px;
+    margin-bottom: 2px;
 }
 
 .header-phone::before {
     position: absolute;
     content: "";
-    top: 3px;
+    top: 13px;
     left: 39px;
     width: 19px;
     height: 19px;
@@ -710,7 +709,7 @@ img {
     color: var(--basic-white);
     background-color: var(--white-opacity-30);
     padding-top: 10px;
-    padding-bottom: 11px;
+    padding-bottom: 10px;
     margin: 0;
     margin-left: 23px;
     width: 135px;
@@ -757,7 +756,7 @@ img {
 .new::before {
     z-index: 2;
     top: 0;
-    right: 0;
+    right: 1px;
     width: 70px;
     height: 70px;
     background-image: url("../img/new.svg");
@@ -788,7 +787,7 @@ img {
 }
 
 .discounts::after {
-    top: 25px;
+    top: 26px;
     right: 45px;
     width: 59px;
     height: 73px;
@@ -851,7 +850,7 @@ img {
     line-height: 36px;
     text-transform: uppercase;
     color: var(--basic-white);
-    margin: 0 0 5px 24px;
+    margin: 0 0 6px 24px;
 }
 
 .slider-text {
@@ -866,7 +865,7 @@ img {
     width: 620px;
     background-color: var(--black-opacity-25);
     padding-top: 23px;
-    padding-bottom: 18px;
+    padding-bottom: 15px;
 }
 
 .slider-gallery-controls {
@@ -919,8 +918,8 @@ img {
 
 .slider-controls button {
     padding: 0;
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
     background-color: var(--basic-white);
     border: 2px solid var(--basic-white);
     border-radius: 50%;
@@ -933,7 +932,7 @@ img {
 .slider-gallery-button {
     display: block;
     width: 192px;
-    margin-top: 95px;
+    margin-top: 97px;
     margin-left: 24px;
 }
 
@@ -955,7 +954,7 @@ img {
 }
 
 .popular-title {
-    margin-left: 29px;
+    margin-left: 28px;
 }
 
 .main-title {
@@ -1010,8 +1009,8 @@ img {
 
 .filter-price-block {
     border-bottom: 1px solid var(--gray-another);
-    padding-bottom: 25px;
-    margin-bottom: 16px;
+    padding-bottom: 26px;
+    margin-bottom: 15px;
 }
 
 .filter-producers-block {
@@ -1053,11 +1052,11 @@ img {
 }
 
 .filter-title-price {
-    margin-bottom: 11px;
+    margin-bottom: 12px;
 }
 
 .filter-title-producers {
-    margin-bottom: 18px ;
+    margin-bottom: 17px;
 }
 
 .filter-title-supply {
@@ -1081,8 +1080,8 @@ img {
     height: 42px;
     background-color: var(--brown-light);
     border-radius: 3px;
-    margin-bottom: 9px;
-    padding-top: 40px;
+    margin-bottom: 8px;
+    padding-top: 39px;
     padding-right: 20px;
     padding-left: 20px;
 }
@@ -1100,7 +1099,7 @@ img {
 
 .toggle {
     position: absolute;
-    top: 30px;
+    top: 29px;
     left: 0;
     width: 4px;
     height: 4px;
@@ -1194,7 +1193,7 @@ img {
     content: "";
     position: absolute;
     left: 0;
-    top: -2px;
+    top: -1px;
     width: 17px;
     height: 17px;
     border: 4px solid var(--Basic-greylight);
@@ -1205,7 +1204,7 @@ img {
     content: "";
     position: absolute;
     left: 8px;
-    top: 6px;
+    top: 7px;
     width: 9px;
     height: 9px;
     background: var(--Basic-greylight);
@@ -1367,7 +1366,7 @@ img {
     color: var(--basic-black);
     width: 179px;
     margin: 0;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 }
 
 .product-button {
@@ -1382,11 +1381,12 @@ img {
     background: url("../img/button-cut.svg") no-repeat 0 0;
     margin-bottom: 19px;
     margin-left: 12px;
-    padding: 10px 11px 11px 0;
+    padding: 10px 11px 12px 0;
 }
 
 .without-del .product-title {
-    margin-bottom: 39px;
+    padding-right: 3px;
+    margin-bottom: 38px;
 }
 
 .product-img {
@@ -1398,7 +1398,7 @@ img {
 
 .product-img img {
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 50%;
     width: 220px;
     height: 170px;
@@ -1429,7 +1429,7 @@ img {
 
 .button-buy {
     display: block;
-    width: 135px;
+    width: 136px;
     border-radius: 2px;
     text-transform: uppercase;
     color: var(--basic-white);
@@ -1447,7 +1447,7 @@ img {
     width: 15px;
     height: 15px;
     top: 10px;
-    left: 28px;
+    left: 29px;
     background: url("../img/icon-cart.svg") no-repeat 0 0;
     opacity: 0.3;
 }
@@ -1466,8 +1466,7 @@ img {
     text-transform: uppercase;
     color: var(--basic-dark);
     border: 3px solid var(--basic-green);
-    padding-top: 9px;
-    padding-bottom:5px;
+    padding: 9px 0 5px;
     padding-right: 4px;
     border-radius: 2px;
     margin: 0 auto;
@@ -1517,7 +1516,7 @@ img {
 
 .popular-producer-item img {
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
     width: 219px;
     height: 142px;
@@ -1656,7 +1655,7 @@ img {
     border: 1px solid var(--gray-another);
     border-radius: 2px;
     padding: 6px 14px 6px 15px;
-    margin-top: 48px;
+    margin-top: 47px;
     margin-bottom: 58px;
     margin-right: 10px;
 }
@@ -1667,7 +1666,7 @@ img {
 
 .pagination-item:last-child {
     padding-left: 31px;
-    padding-right: 30px;
+    padding-right: 31px;
 }
 
 .pagination-item a {
@@ -1707,17 +1706,17 @@ img {
 .punchers-info {
     font-family: "PT Sans", Arial, sans-serif;
     margin: 0;
-    margin-top: 24px;
+    margin-top: 25px;
 }
 
 .punchers-info {
     padding-top: 25px;
     margin: 0;
-    padding-bottom: 72px;
+    padding-bottom: 69px;
 }
 
 .about-description-second {
-    padding-top: 3px;
+    padding-top: 1px;
     margin-bottom: 4px;
 }
 
@@ -1731,7 +1730,7 @@ img {
     position: relative;
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 12px;
+    margin-bottom: 11px;
     padding-left: 37px;
 }
 
@@ -1740,7 +1739,7 @@ img {
     content: "";
     width: 25px;
     height: 2px;
-    top: 12px;
+    top: 10px;
     left: 0;
     background-color: var(--basic-red);
 }
@@ -1756,7 +1755,7 @@ img {
 
 .button-about {
     display: block;
-    margin-top: 20px;
+    margin-top: 19px;
     width: 220px;
 }
 
@@ -1766,7 +1765,7 @@ img {
 }
 
 .service-info {
-    margin-top: 27px;
+    margin-top: 25px;
 }
 
 .service-description-item {
@@ -1810,7 +1809,7 @@ img {
 
 .footer-text-contact {
     margin-top: 30px;
-    margin-left: 2px;
+    margin-left: 3px;
 }
 
 .top-list a {
@@ -1875,8 +1874,8 @@ img {
 .social-button::before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 48%;
+    top: 47%;
+    left: 46%;
     transform: translate(-50%, -50%);
 }
 
@@ -1904,11 +1903,7 @@ img {
     font-weight: 400;
     color: var(--basic-white);
     margin: 0;
-    padding-top: 3px;
-}
-
-.footer-feedback-link.footer-small-text {
-    line-height: 97%;
+    padding-top: 0px;
 }
 
 .footer-feedback-link,
@@ -1964,6 +1959,7 @@ img {
     width: 29px;
     height: 4px;
     background-color: var(--basic-red);
+    border-radius: 3px;
 }
 
 .modal-close::before {
@@ -1981,7 +1977,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     background-color: var(--basic-white);
-    padding: 38px 80px 29px;
+    padding: 40px 80px 29px;
 }
 
 .feedback-text-letter {
@@ -2008,7 +2004,7 @@ img {
     font-size: 13px;
     line-height: 24px;
     color: var(--gray-darken);
-    padding: 6px 0 5px 12px;
+    padding: 4px 0 6px 11px;
     border: 2px solid var(--Basic-greylight);
     border-radius: 2px;
     margin-top: 11px;
@@ -2017,9 +2013,7 @@ img {
 .feedback-letter {
     width: 460px;
     height: 114px;
-    padding: 0;
-    padding-top: 4px;
-    padding-left: 12px;
+    padding: 4px 11px;
     resize: none;
 }
 
@@ -2051,7 +2045,7 @@ img {
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
-    padding: 67px 175px 66px;
+    padding: 67px 175px 65px;
     text-align: center;
     background: url("../img/icon-mark.svg") no-repeat 82px 48px;
     background-color: var(--basic-white);
@@ -2060,13 +2054,13 @@ img {
 .modal-cart-buttons {
     display: flex;
     justify-content: center;
-    padding: 38px 0 36px;
+    padding: 38px 0 36px 4px;
     background-color: var(--gray-cart-bg);
 }
 
 .button-checkout {
-    padding-left: 47px;
-    padding-right: 46px;
+    padding-left: 46px;
+    padding-right: 47px;
 }
 
 .button-continue {
@@ -2078,16 +2072,16 @@ img {
 }
 
 .button-continue:hover {
-    background-color: var(--basic-white); /* Перебил ховер состояние кнопки по умолчанию*/
+    background-color: var(--basic-white);
     color: var(--basic-black);
 }
 
 .button-continue:active {
-    color: var(--basic-greylight); /* По ТЗ нет, но добавил актив состояние */
+    color: var(--basic-greylight);
 }
 
-.modal-feedback,
 .modal-cart,
+.modal-feedback,
 .modal-map {
     display: none;
 }
