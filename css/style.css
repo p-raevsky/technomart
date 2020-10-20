@@ -206,7 +206,7 @@ img {
 .top-list ul {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    gap: 59px;
+    gap: 60px;
     width: 549px;
     margin-right: auto;
 }
@@ -1797,7 +1797,7 @@ img {
 }
 
 .bottom-list {
-    padding-top: 34px;
+    padding-top: 33px;
 }
 
 .footer-text {
@@ -1874,8 +1874,8 @@ img {
 .social-button::before {
     content: "";
     position: absolute;
-    top: 47%;
-    left: 46%;
+    top: 48%;
+    left: 48%;
     transform: translate(-50%, -50%);
 }
 
