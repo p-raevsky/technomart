@@ -1380,8 +1380,8 @@ img {
     color: var(--basic-white);
     background: url("../img/button-cut.svg") no-repeat 0 0;
     margin-bottom: 19px;
-    margin-left: 12px;
-    padding: 10px 11px 12px 0;
+    margin-left: 10px;
+    padding: 9px 11px 12px 0;
 }
 
 .without-del .product-title {
