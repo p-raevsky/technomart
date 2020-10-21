@@ -111,7 +111,7 @@
                     <h2 class="visually-hidden">Промо-блок</h2>
 
                     <ul class="promo-list list-style-none">
-                        <li class="promo-item materials new">
+                        <li class="promo-item materials new" aria-label="Помечено категорией «Новинка»">
                             <h3 class="promo-item-title">Материалы</h3>
 
                             <a class="promo-item-link" href="#">На любой вкус</a>
@@ -197,7 +197,7 @@
                             </div>
                         </li>
                         <li class="product popular-item ">
-                            <div class="card-product new">
+                            <div class="card-product new" aria-label="Помечено категорией «Новинка»">
                                 <div class="product-img">
                                     <img src="img/product-2.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000 синего цвета с ручкой для удобной фиксации руки. Оснащен аккумуляторной батареей">
 
@@ -231,7 +231,7 @@
                             </div>
                         </li>
                         <li class="product popular-item">
-                            <div class="card-product without-del new">
+                            <div class="card-product without-del new" aria-label="Помечено категорией «Новинка»">
                                 <div class="product-img">
                                     <img src="img/product-2.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000 синего цвета с ручкой для удобной фиксации руки. Оснащен аккумуляторной батареей">
 
@@ -387,7 +387,7 @@
                             <img src="img/map-small.png" width="300" height="158" alt="Локация на карте. Улица Большая Конюшенная, 19">
                         </a>
 
-                        <button class="button button-contacts" type="button">Заблудились? Напишите нам!</button>
+                        <button class="button-contacts button" type="button">Заблудились? Напишите нам!</button>
                     </section>
                 </div>
             </div>
@@ -470,7 +470,7 @@
                         </section>
 
                         <section class="footer-developed">
-                            <h3 class="footer-small-text">Разработано –</h3>
+                            <h3 class="footer-small-text">Разработано &ndash;</h3>
 
                             <a class="footer-developed-link footer-small-text" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
                         </section>
@@ -485,17 +485,17 @@
                 <div class="feedback-form-block">
                     <label class="feedback-text">
                         Ваше имя:<br>
-                        <input class="feedback-form-field feedback-name" type="text" name="user-name" placeholder="Имя Фамилия" required>
+                        <input class="feedback-form-field feedback-name" type="text" name="user-name" placeholder="Имя Фамилия">
                     </label>
 
                     <label class="feedback-text feedback-text-email">
                         Ваш e-mail:<br>
-                        <input class="feedback-form-field feedback-email" type="email" name="user-email" placeholder="email@example.com" required>
+                        <input class="feedback-form-field feedback-email" type="email" name="user-email" placeholder="email@example.com">
                     </label>
 
                     <label class="feedback-text feedback-text-letter">
                         Текст письма:<br>
-                        <textarea class="feedback-form-field feedback-letter" name="letter" required placeholder="В свободной форме"></textarea>
+                        <textarea class="feedback-form-field feedback-letter" name="letter" placeholder="В свободной форме"></textarea>
                     </label>
                 </div>
 
@@ -510,6 +510,19 @@
             <img src="img/map-big.png" width="943" height="449" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
             <a class="modal-close" href="#" aria-label="Закрыть"></a>
         </section>
+
+        <section class="modal modal-cart">
+            <h2 class="added-cart">Товар добавлен в корзину!</h2>
+
+            <div class="modal-cart-buttons">
+                <a class="button button-checkout" href="#">Оформить заказ</a>
+                <a class="button button-continue" href="#">Продолжить покупки</a>
+            </div>
+
+            <a class="modal-close" href="#" aria-label="Закрыть"></a>
+        </section>
+
+        <script src="js/script.js"></script>
 
     </body>
 </html>

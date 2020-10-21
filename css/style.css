@@ -2085,3 +2085,50 @@ img {
 .modal-map {
     display: none;
 }
+
+.modal-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
+}
+
+/* Animations */
+
+@keyframes bounce {
+    0% {
+        transform: translate(-50%, -2000px);
+    }
+
+    50% {
+        transform: translate(-50%, -100px);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+        transform: translate(-50%, -50%);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translate(-51%, -50%);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translate(-49%, -50%);
+    }
+  }
