@@ -65,13 +65,13 @@ feedbackForm.addEventListener("submit", function (evt) {
 
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
-      if (feedbackPopup.classList.contains("modal-show")) {
-        evt.preventDefault();
-        feedbackPopup.classList.remove("modal-show");
-        feedbackPopup.classList.remove("modal-error");
-      }
+        if (feedbackPopup.classList.contains("modal-show")) {
+            evt.preventDefault();
+            feedbackPopup.classList.remove("modal-show");
+            feedbackPopup.classList.remove("modal-error");
+        }
     }
-  });
+});
 
 mapLink.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -84,12 +84,12 @@ mapClose.addEventListener("click", function (evt) {
 });
 
 window.addEventListener("keydown", function (evt) {
-if (evt.keyCode === 27) {
-    if (mapPopup.classList.contains("modal-show")) {
-    evt.preventDefault();
-    mapPopup.classList.remove("modal-show");
+    if (evt.keyCode === 27) {
+        if (mapPopup.classList.contains("modal-show")) {
+            evt.preventDefault();
+            mapPopup.classList.remove("modal-show");
+        }
     }
-}
 });
 
 cartLink.addEventListener("click", function (evt) {
@@ -103,10 +103,10 @@ cartClose.addEventListener("click", function (evt) {
 });
 
 window.addEventListener("keydown", function (evt) {
-if (evt.keyCode === 27) {
-    if (cartPopup.classList.contains("modal-show")) {
-    evt.preventDefault();
-    cartPopup.classList.remove("modal-show");
+    if (evt.keyCode === 27) {
+        if (cartPopup.classList.contains("modal-show")) {
+            evt.preventDefault();
+            cartPopup.classList.remove("modal-show");
+        }
     }
-}
 });
