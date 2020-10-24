@@ -916,17 +916,17 @@ img {
     justify-content: space-between;
 }
 
-.slider-controls button {
+.bullet {
     padding: 0;
     width: 10px;
     height: 10px;
-    background-color: var(--basic-white);
+    background-color: var(--basic-red);
     border: 2px solid var(--basic-white);
     border-radius: 50%;
 }
 
-.slider-controls .current {
-    background-color: var(--basic-red);
+.bullet-current {
+    background-color: var(--basic-white);
 }
 
 .slider-gallery-button {
@@ -978,8 +978,16 @@ img {
     margin-bottom: 28px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-top: 8px;
     padding-bottom: 9px;
+}
+
+.sorting-item-block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 .filter-title,
@@ -1249,7 +1257,7 @@ img {
 }
 
 .sorting-function {
-    margin-right: 106px;
+    margin-right: 105px;
 }
 
 .sorting-type {
