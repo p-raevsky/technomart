@@ -226,7 +226,7 @@ img {
 
 /* Flex */
 
-.toolbar .container {  /*с помощью флекса расставлю потом остальные элементы тулбара*/
+.toolbar .container {
     display: flex;
 }
 
@@ -271,7 +271,7 @@ img {
 
 .breadcrumbs {
     display: flex;
-    padding-left: 14px;
+    flex-wrap: wrap;
 }
 
 .product-block {
@@ -975,11 +975,11 @@ img {
     background-color: var(--brown-light);
     margin-top: 20px;
     border-radius: 3px;
-    margin-bottom: 28px;
+    margin-bottom: 27px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 8px;
+    padding-top: 9px;
     padding-bottom: 9px;
 }
 
@@ -1004,7 +1004,7 @@ img {
 
 .filter-title,
 .sorting-title {
-    padding-left: 19px;
+    padding: 0 19px;
 }
 
 .filter-title-bg {
@@ -1161,6 +1161,14 @@ img {
     border-radius: 3px;
 }
 
+.filter-input-checkbox:focus + span,
+.filter-input-radio:focus + span {
+border-radius: 1px;
+    box-shadow:
+        0 2px 0 5px var(--basic-white),
+        0 2px 0 7px var(--basic-black);
+}
+
 .filter-input-checkbox:checked + .checkbox-input::after {
     content: "";
     position: absolute;
@@ -1257,7 +1265,7 @@ img {
 }
 
 .sorting-function {
-    margin-right: 105px;
+    margin-right: 46px;
 }
 
 .sorting-type {
@@ -1265,7 +1273,7 @@ img {
 }
 
 .sorting-price {
-    margin-right: 70px;
+    margin-right: 71px;
     margin-left: auto;
 }
 
@@ -1273,6 +1281,11 @@ img {
     opacity: 0.3;
     padding: 0;
     border-bottom: 1px dotted var(--basic-red);
+}
+
+.sorting-item:focus {
+    opacity: 1;
+    border-bottom-color: transparent;
 }
 
 .sorting-item:hover {
@@ -1287,8 +1300,23 @@ img {
     cursor: default;
 }
 
+.sorting-method {
+    display: flex;
+    padding-right: 15px;
+}
+.sorting-type-up {
+    margin-right: 20px;
+}
+
 .sorting-item-type {
     position: relative;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+.sorting-item-type:focus {
+    box-shadow: 0 0 0 2px var;
 }
 
 .sorting-method svg {
@@ -1296,22 +1324,24 @@ img {
 }
 
 .sorting-type-up svg {
-    top: -5px;
-    right: 48px;
+    top: 0;
+    right: 1px;
     transform: rotate(180deg);
 }
 
 .sorting-type-down svg {
-    top: -5px;
-    right: 15px;
+    top: 0;
+    right: 0;
 }
 
-.sorting-method svg:hover {
+.sorting-item-type:hover:not(.sorting-type-active) svg {
     fill: var(--basic-black);
+    cursor: pointer;
 }
 
 .sorting-type-active svg {
     fill: var(--basic-red);
+    cursor: default;
 }
 
 .product {
@@ -1350,7 +1380,7 @@ img {
     width: 8px;
     height: 14px;
     top: 23px;
-    left: -23px;
+    left: -24px;
     background: url("../img/icon-right-small.svg") no-repeat 0 0;
 }
 
@@ -1362,8 +1392,19 @@ img {
     width: 14px;
     height: 12px;
     top: 24px;
-    left: -14px;
+    left: 0px;
     background: url("../img/icon-home.svg") no-repeat 0 0;
+}
+
+.breadcrumbs-home {
+    width: 16px;
+    height: 18px;
+    display: block;
+    border-radius: 2px;
+}
+
+.breadcrumbs-home:focus {
+    box-shadow: 0 0 0 2px;
 }
 
 .product-title {
@@ -1512,6 +1553,11 @@ img {
 .popular-producer-item a {
     position: relative;
     display: block;
+    height: 100%;
+}
+
+.popular-producer-item a:focus {
+    outline: var(--basic-black) solid 2px;
 }
 
 .popular-producer-item:hover {
