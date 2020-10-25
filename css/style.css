@@ -405,7 +405,7 @@ img {
     opacity: 1;
 }
 
-.toolbar-form:focus-within .search-field{
+.toolbar-form:focus-within .search-field {
     color: var(--basic-black);
     background-color: var(--basic-white);
 }
@@ -1466,6 +1466,10 @@ border-radius: 1px;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+}
+
+.card-product:focus-within .card-hover {
+    opacity: 1;
 }
 
 .card-product:hover {
