@@ -300,6 +300,7 @@ img {
 
 .pagination-list {
     display: flex;
+    padding: 47px 0 58px 240px;
 }
 
 .footer-top {
@@ -1163,7 +1164,7 @@ img {
 
 .filter-input-checkbox:focus + span,
 .filter-input-radio:focus + span {
-border-radius: 1px;
+    border-radius: 1px;
     box-shadow:
         0 2px 0 5px var(--basic-white),
         0 2px 0 7px var(--basic-black);
@@ -1709,47 +1710,35 @@ border-radius: 1px;
     background-image: url("../img/credit.png");
 }
 
-.pagination-item {
-    border: 1px solid var(--gray-another);
-    border-radius: 2px;
-    padding: 6px 14px 6px 15px;
-    margin-top: 47px;
-    margin-bottom: 58px;
-    margin-right: 10px;
-}
-
-.pagination-item:first-child {
-    margin-left: 240px;
-}
-
-.pagination-item:last-child {
-    padding-left: 31px;
-    padding-right: 31px;
-}
-
-.pagination-item a {
+.pagination-link {
+    display: block;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
     color: var(--basic-black);
+    border: 1px solid var(--gray-another);
+    border-radius: 2px;
+    padding: 9px 14px 9px 15px;
+    margin-right: 10px;
+}
+
+.pagination-item:last-child .pagination-link {
+    padding: 9px 31px;
 }
 
 .pagination-item-current {
+    color: var(--basic-white);
     background-color: var(--basic-red);
     border-color: transparent;
 }
 
-.pagination-item-current a {
-    color: var(--basic-white);
-}
-
-.pagination-item:hover {
+.pagination-link:hover {
     border: 1px solid var(--Basic-greylight);
     border-radius: 2px;
 }
 
-.pagination-item:active {
+.pagination-link:active {
     border: 1px solid var(--basic-red);
     border-radius: 2px;
 }
@@ -2091,6 +2080,7 @@ border-radius: 1px;
     content: "";
     width: 100%;
     height: 100%;
+    border:0;
 }
 
 /* Modal cart */
